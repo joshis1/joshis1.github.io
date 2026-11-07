@@ -11,7 +11,7 @@ description: Notes on technical leadership, Java, software design, Linux, and th
     <p class="hero-intro">I’m Shreyas Joshi. I write about the craft of technical leadership, Java and software design, and the Linux systems that make products work.</p>
     <div class="hero-actions">
       <a class="button button-dark" href="#latest-writing">Explore the writing <span aria-hidden="true">↓</span></a>
-      <a class="text-link" href="{{ '/about/' | relative_url }}">A little about me <span aria-hidden="true">→</span></a>
+      <a class="text-link" href="{{ '/about.html' | relative_url }}">A little about me <span aria-hidden="true">→</span></a>
     </div>
   </div>
   <figure class="hero-image">

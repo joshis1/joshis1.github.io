@@ -1,7 +1,6 @@
 ---
 layout: page
 title: About
-permalink: /about/
 description: About Shreyas Joshi: technical leadership, Java, software engineering, Linux, and embedded systems.
 ---
 
