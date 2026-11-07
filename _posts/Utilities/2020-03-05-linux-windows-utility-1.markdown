@@ -1,96 +1,70 @@
 ---
 layout: post
-title:  "Linux and Windows Utilities - Part 1"
+title:  "Linux and Windows Utilities: Practical Notes, Part 1"
 date:   2020-03-05 14:23:31 +1300
 categories: Utilities
+description: Practical notes on Linux and Windows utilities, with safer file-encryption guidance and command examples.
 ---
 
-This article is all about simple utitlities and to answer the simple questions being asked commonly.
+This article collects short answers to common Linux and Windows questions. The examples reflect the tools available when these notes were written; check local versions and options before using them.
 
-**How to encrypt the password file?**
+## Encrypting a file
 
-You could use openssl to encrypt the password file.
-Here is the command provided by openssl to encrypt any file.
+For new workflows, consider a maintained file-encryption tool such as `age`. If you use OpenSSL, use a current version and a strong passphrase. Avoid putting a passphrase directly on the command line, where it may be exposed in shell history or process listings. OpenSSL versions that support PBKDF2 can prompt for the passphrase:
 
-{% highlight ruby %}
-$openssl aes-256-cbc  -e -k 'ABC' -in password.txt -out password_enc.txt
+{% highlight text %}
+openssl enc -aes-256-cbc -salt -pbkdf2 -iter 600000 -in password.txt -out password.enc
 {% endhighlight %}
 
-Now to read back,
+Decrypt with the same options:
 
-{% highlight ruby %}
-$openssl aes-256-cbc  -d -k 'ABC' -in password_enc.txt -out password_decrypted.txt
+{% highlight text %}
+openssl enc -d -aes-256-cbc -pbkdf2 -iter 600000 -in password.enc -out password.txt
 {% endhighlight %}
 
-The AES stands for advanced encryption standard.
-AES is advanced version than DES- Data Encryption Standard. It uses symmetric key algorithm, same key is used for both encryption and decryption.
+AES is a symmetric cipher: the same secret is used to encrypt and decrypt. CBC mode does not authenticate the file, so successful decryption alone does not prove that the file has not been modified. Prefer an authenticated encryption format or a tool designed for file encryption when choosing a new workflow.
 
-Here 256 is the cipher key size.
-The key size must be the multiple of 32 bits. CBC is the algorithm.
-It stands for cipher block chaining. 
-
-It is worth to note that the bigger the block size is, it takes more number of rounds to encrypt the data that means it is more secure.
-
-In the above example 'ABC' is the key.
--e stands for encryption
--d stands for decryption
-
-**How to delete the directory wih special names in linux?**
+## Removing a directory with an unusual name
 
 For file deletions, one trick is to wildcard as much of the name as you can, and use the -i (interactive) option to decide what subset of the matches to delete, one by one. The rmdir command does not have that, but the recursive file removal will deal with directories. E.g.
 
-{% highlight ruby %}
-$rm -r -i AB*20191217-163059*
+{% highlight text %}
+rm -r -i -- AB*20191217-163059*
 {% endhighlight %}
 
-**What is -exec keyword in linux command?**
+Review every prompt before confirming deletion. If the directory name begins with `-`, use `--` before it so it is not interpreted as an option.
 
-'-exec' is an option specific to 'find' command. This is used to run other commands on the results returned from the 'find' command. So, exec doesn't exist by its own, it can be combined only with find command.
+## Using `-exec` with `find`
+
+`-exec` is a `find` action that runs another command on each matching path.
 
 **Example**
 
-{% highlight ruby %}
-$find ./ -iname '*.c' -o -name '*.h' -o -name '*.l' -exec grep -in test1 /dev/null {} \;
+{% highlight text %}
+find . -type f \( -iname '*.c' -o -iname '*.h' -o -iname '*.l' \) -exec grep -in 'test1' /dev/null {} \;
 {% endhighlight %}
 
-The above can be simplified to
+For C and header files only:
 
-{% highlight ruby %}
-find ./ -iname '*.[ch]' -exec grep -in test1 /dev/null {} \;
+{% highlight text %}
+find . -type f -iname '*.[ch]' -exec grep -in 'test1' /dev/null {} \;
 {% endhighlight %}
 
-{% highlight ruby %}
-{} expands to the filename of each file or directory found with find, this is uses as an argument to grep.
-{% endhighlight %}
+`{}` is replaced with each matched path. The escaped semicolon closes the `-exec` action for `find` rather than the shell.
 
-{% highlight ruby %}
-; - ends the command executed by exec. Escape by '\' so that ';' is not used by the shell but it is used by find.
-{% endhighlight %}
-
-Because ';' is a valid command in shell linux. For e.g.
-
-{% highlight ruby %}
-$cat password.txt; cat password_enc.txt  
-{% endhighlight %}
-
-The above will display password.txt and then it will display password_enc.txt. 
-
-In our case, we don't want to use ';' by shell but to pass this to exec. So that's why we are using escape character '\'.
-
-**What is the utility in Windows to run DHCP Server for tftp purpose?**
+## Running a DHCP server on Windows
 
 Here is the utility that I use in Windows10 to run my DHCP server.
 
 [dhcp server](https://www.dhcpserver.de/cms/)
 
-**What is the utility to see what IP addresses have been assigned by the DHCP Server**
+## Discovering active hosts on your own network
 
-This utility nmap is very powerful and can be useful even to know what are the different IP addresses  that 
-are active. 
+Nmap can help inventory hosts on a network you own or are authorized to administer. Keep the target range within that scope.
 
-{% highlight ruby %}
+{% highlight text %}
 
-$sudo nmap -sP 11.11.11.1-254
+sudo nmap -sn 11.11.11.1-254
 
 Starting Nmap 7.40 ( https://nmap.org ) at 2020-03-29 22:59 PDT
 Nmap scan report for 11.11.11.1
@@ -104,16 +78,16 @@ Host is up.
 Nmap done: 254 IP addresses (3 hosts up) scanned in 15.42 seconds 
 {% endhighlight %}
 
-**How to grep for a text in the current directory but skip looking inside the directory**
+## Searching files without recursing into directories
 Here -d skip means skip looking into the directory.
 Next -H means print the file names.
 Generally, the '-d skip' is used with the find and exec.
 
-{% highlight ruby %}
+{% highlight text %}
 find ./ -exec grep -d skip -H 'asf' {} \;
 {% endhighlight %}
 
-**How to increase the size of your virtual machine box?**
+## Increasing a virtual machine's disk size
 Many times, you will realise that your virtual machine box needs more space then you have allocated previously.
 I faced this issue while using yocto in my virtual machine running Ubuntu. Here is what I referred to increase
 the size of my virtual machine box - 

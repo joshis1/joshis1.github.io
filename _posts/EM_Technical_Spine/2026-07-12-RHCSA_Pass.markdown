@@ -3,6 +3,7 @@ layout: post
 title:  "How I Passed RHCSA on RHEL 10: Practical Lessons and Preparation Tips"
 date:   2026-07-12 20:30:00 +1000
 categories: EM_Technical_Spine
+description: A practical RHCSA preparation approach focused on RHEL practice, documentation, verification, and timed exercises.
 ---
 
 This article is for anyone preparing for the **Red Hat Certified System Administrator (RHCSA)** exam.

@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  "Chain_Of_Responsibility_Pattern"
+title:  "The Chain of Responsibility Pattern in C++"
 date:   2018-06-05 10:13:31 +1300
 categories: Design_Patterns
+description: A C++ command-dispatch example that explains handlers, delegation, and trade-offs in a chain of responsibility.
 ---
-This article is all about “Chain of Responsibility Design Pattern.” This pattern
-falls under the category of “Behavioural Pattern.”
+The Chain of Responsibility pattern lets a request pass through a sequence of handlers. A handler can process the request or pass it to the next handler, reducing the sender's dependency on a specific receiver.
+
+The C++ example below dispatches an enum value in one process. It is not an XMPP parser, transport, or security implementation.
 
 **Difference between Structural and Behavioural Pattern**
 1. Structural Pattern talks about the relationship between entities. For
@@ -24,8 +26,9 @@ either process the desired command or will just delegate to their next object.
 A STB will receive the XMPP commands, the commands are for various
 sub-modules. For example, reboot the box – by Power Manager of the box,
 HDD health – by Storage Manager of the box, and code download – by the
-Software Upgrade Manager of the box. Also, we need scalability so that if any
-other module/requirement comes, then there is no code change required.
+Software Upgrade Manager of the box. Adding a handler can avoid changes to
+existing handlers, but new command types and registrations still require
+updates to the system.
 
 **Solution/Discussion:**
 These entities are totally disconnected. For example,
@@ -74,7 +77,7 @@ Here is the code for each class.
 
   * XMPP command Enums
 
- {% highlight ruby %}
+ {% highlight cpp %}
 
   #ifndef XMPPCOMMANDS_H
   #define XMPPCOMMANDS_H
@@ -92,7 +95,7 @@ Here is the code for each class.
 
   * XMPP Stanza – Head node/ Super Class/ Base class
 
-  {% highlight ruby %}
+  {% highlight cpp %}
 
   #ifndef XMPPSTANZA_H
   #define XMPPSTANZA_H
@@ -127,7 +130,7 @@ Here is the code for each class.
           m_pnext->processStanza(commands);
         }
       }
-      ~XmppStanza()
+      virtual ~XmppStanza()
       {
         qDebug()<<"Destructor of Xmpp Stanza is invoked";
       }
@@ -139,7 +142,7 @@ Here is the code for each class.
 
   * Pipeline Object – codeDownProcessor.
 
-{% highlight ruby %}
+{% highlight cpp %}
 
 #ifndef CODEDOWNLOADPROCESSOR_H
 #define CODEDOWNLOADPROCESSOR_H
@@ -179,7 +182,7 @@ class codeDownloadProcessor : public XmppStanza
 
   * Pipeline Object – hddDiagnosticsProcessor.
 
-{% highlight ruby %}
+{% highlight cpp %}
 
 #ifndef HDDDIAGNOSTICSPROCESS_H
 #define HDDDIAGNOSTICSPROCESS_H
@@ -219,7 +222,7 @@ class hddDiagnosticsProcessor : public XmppStanza
 
   * Pipeline Object – rebootStbProcessor.
 
-{% highlight ruby %}
+{% highlight cpp %}
 
 #ifndef REBOOTSTBPROCESSOR_H
 #define REBOOTSTBPROCESSOR_H
@@ -259,7 +262,7 @@ class rebootStbProcessor : public XmppStanza
 
   * Client
 
-{% highlight ruby %}
+{% highlight cpp %}
 
 #include <QtCore/QCoreApplication>
 #include "XmppCommands.h"
@@ -277,7 +280,6 @@ int main(int argc, char * argv[])
   xmppCmds.addNextStanzaProcessor(&xmppSoftwareUpgrade);
   xmppCmds.addNextStanzaProcessor(&xmppHddHealth);
   xmppCmds.addNextStanzaProcessor(&xmppRebootStb);
-  xmppCmds.addNextStanzaProcessor(NULL);
   xmppCmds.processStanza(rebootStbProcess);
   xmppCmds.processStanza(codeDownloadProcess);
   xmppCmds.processStanza(hddDiagnosticsProcess);
@@ -291,7 +293,9 @@ Here is the output.
 
 <img src="/assets/img/COR_Output.png" alt="COR_Output">
 
-This brings an end to the topic of “Chain of Responsibility Design Pattern.”.
+The example shows the basic delegation idea. A production dispatcher should also define how an unhandled command is reported, who owns each handler, and how handler lifetimes relate to the chain.
+
+This brings an end to the topic of the Chain of Responsibility pattern.
 Here is the entire code that can be downloaded.
 
 [Source_code_COR_Pattern](https://drive.google.com/open?id=19BCediyhqoeB7vQWyJZnhWbGlwrgZyj-)

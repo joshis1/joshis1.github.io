@@ -1,19 +1,14 @@
 ---
 layout: post
-title:  "Relationship_among_Classes"
+title:  "Relationships Between Classes: Inheritance, Association and Composition"
 date:   2015-06-12 14:13:31 +1300
 categories: Design_Patterns
+description: An introduction to class relationships, inheritance, association, aggregation, composition, and C++ access modes.
 ---
 
-This article is all about the relationship among classes. This is the
-fundamental in ‘Object Oriented Programming‘ design. In Object Oriented
-designing, the decision always boils down to “IS A” relationship or “HAS A”
-relationship. Thus, it is important to know “IS A” relationship or “HAS A”
-relationship in order to design any object .
-Code Re-use – This is one of the attribute of OOPs. This is attained either
-by Composition or Inheritance.
+Class relationships are a foundation of object-oriented design. Two useful questions are whether one type can substitute for another (“is-a”) and whether an object collaborates with or owns another object (“has-a”). Prefer modeling the behavior and lifecycle you need over choosing inheritance solely to reuse code.
 
-**How to identify Inheritance?**
+## Inheritance: an “is-a” relationship
 The easiest way to identify the candidate for inheritance is by asking yourself
 a quest ion – “Is this new candidate “is a” / kind /sub-type of an old
 candidate?.” If the answer is yes, then it is very much suitable for inherit ance.
@@ -29,7 +24,7 @@ we will see generalization and realization in inheritance.
 Example – PVR Set top box is a type/kind of Settopbox(STB). Here, the STB
 is the base class, and the PVR STB is a derived class.
 
-**How to identify Composition?**
+## Association and composition: “has-a” relationships
 The easiest way to identify the candidate for composition is by asking
 yourself a question – “Is this new candidate has an old candidate?. If the
 answer is yes, then it is very much suitable for composition. Here, the new
@@ -43,7 +38,7 @@ class object – tuner, as a member variable. Later, we will see the aggregation
 and composition. Also, aggregation is called a weak composition. On the other
 hand, composition is called a strong composition. Later, we will see why
 they are called so.
-Terms to describe relationship among classes
+## Association
 These terms are not only useful in creating the logical diagrams i.e. class
 diagrams, but also they are useful from design aspects.
 
@@ -66,7 +61,7 @@ class A.
 
 <img src="/assets/img/Directional_Association.png" alt="Directional_Association">
 
-**Types of Directional Association – “Has -a” Relationship**
+## Aggregation and composition
 1. **Aggregation** – Also, this is called a weak composition. Here, the object
 that is contained by the new object can exist independently. The life time of
 the contained object is not controlled by the container object . Generally, the
@@ -95,7 +90,7 @@ the coupling between them is strong.
 
 <img src="/assets/img/Composition.png" alt="Composition">
 
-**Inheritance - ” IS A” Relationship**
+## Abstract classes and interfaces
 Before we dive into inheritance, let’s understand the two types of classes.
 a. **Abstract class** – This is a blue print – model of the object . However, it
 cannot be instantiated. An abstract class has a few general methods implemented.
@@ -107,20 +102,14 @@ methods of the abstract class. In C++, we make the abstract class by putting
 the keyword ‘virtual’ and equating the method to zero. For example, the
 following is the syntax to make the class abstract in C++.
 
-{% highlight ruby %}
+{% highlight cpp %}
 
 /* a pure virtual function * /
 virtual void unImplementedMethod(void) = 0;
 
 {% endhighlight %}
 
-b. **Interface class** – This is a blue print – model of the object. However, it
-cannot be instantiated. An interface class has only pure virtual methods i.e.
-properties that is expected by the class. A derived class will implement the
-interface class. Unlike abstract class, the interface class has no methods
-implemented. Also, it doesn’t have any member variables. A derived/subclass
-always implements the interface class. Generally, the name of interface
-class starts with the letter ‘I’.
+b. **Interface class** – In C++, an interface is a design convention, not a special language construct. A class intended as an interface often exposes pure virtual operations and a virtual destructor. C++ does not prohibit it from having data members or implemented methods, but keeping an interface focused makes it easier to use.
 
 **How an ‘Inheritance’ is synthesized ?**
 1. **Generalization** – Here the derived class extends the abstract class.
@@ -133,28 +122,17 @@ derived class is a specialized class.
 
 <img src="/assets/img/Realization.png" alt="Realization">
 
-Another way to synthesize Composition is with the help of Private Inheritance:
+## Private inheritance in C++
 
-This is another way to implement composition using private inheritance. So,
-generally people ask “what is the use-case of private inheritance”, and the
-answer is composition. Practically speaking, private inheritance is not
-preferred to do composition -at-least I didn’t see in the industry. Let’s
-see how private inheritance does the job of composition.
+Private inheritance is not composition. It models implementation inheritance: the derived class is implemented in terms of a base class, but the public subtype relationship is hidden from callers. For ordinary object composition, store the collaborator as a data member instead. Private inheritance can be useful when the derived type needs access to a base implementation or when a specific library technique requires it, but it should be chosen deliberately.
 
 **Property of Private inheritance -**
-1. All the private members of the base class is not inherited.
-2. All the public members of the base class is inherited as private only.
-3. All the protected members of the base class is inherited as private only.
-Here is the Program to realize composition using Private Inheritance. After
-private inheritance, the derived class contains the base class according to the
-aforesaid three rules. Or in other words, the derived class has a base class.
-Here, the public methods of the derived class will call its private methods,
-which is a base class – protected and public members. If you have the getters
-and setters in the base class for the private members, then the derived class
-can indirectly access the private members of the base class using these
-getters and sett ers. The following example depicts this attribute.
+1. Base-class private members remain part of the base subobject but are inaccessible by name in the derived class.
+2. Base-class public and protected members are accessible to the derived class as private members.
 
-{% highlight ruby %}
+The following legacy example demonstrates access through private inheritance. It is not an example of composition; a member field would be the clearer design if the goal were simply to contain another object.
+
+{% highlight cpp %}
 
 #include <QtCore/QCoreApplication>
 #include <QDebug>
@@ -212,6 +190,4 @@ Here is the output –
 
 <img src="/assets/img/Private_inheritance.png" alt="Private_inheritance">
 
-This tutorial covered alot of important Object Oriented Programming
-terminologies. It is important to know these terminologies in order to start
-designing your program – logical/class diagram.
+These relationships are useful vocabulary for discussing class diagrams and making design trade-offs. Use them to communicate intent, then check that the resulting design supports the required behavior and object lifetimes.

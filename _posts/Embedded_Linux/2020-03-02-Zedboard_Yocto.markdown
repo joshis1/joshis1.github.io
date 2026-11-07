@@ -1,11 +1,12 @@
 ---
 layout: post
-title:  "Zedboard Linux bringup using Yocto"
+title:  "Bringing Up Avnet MicroZed Linux with Yocto"
 date:   2020-02-02 14:13:31 +1300
 categories: Embedded_Linux
+description: A historical Yocto Warrior walkthrough for building and booting Linux on an Avnet MicroZed Zynq board.
 ---
 
-This article is all about building and generating the u-boot (SPL) image, linux kernel, device tree and root file system for the Avnet Zedboard 7010.
+This historical walkthrough records the steps I used to build U-Boot, a Linux kernel, a device tree, and a root filesystem for an Avnet MicroZed Zynq-7010 board using Yocto Warrior.
 Also, I will touch on how to create the fpga bit stream to program the Programming logic(PL). I have no experience in fpga but I would like to touch the fpga bit stream topic for the sake of completeness. Basically, a fully functional system where we can do tweaks later on. This is all about setting up the foundation to load the operating environment on the Avnet microZed using sd card/mmc. The model name is  Z7MB-7z0x0-ASY.  
 
 <img src="/assets/img/AVNET_Zedboard.png" alt="MicroZed Zynq AVNET">
@@ -28,7 +29,7 @@ Install the essentials in order to use Yocto.
 **Ubuntu and Debian**
 The essential and graphical support packages you need for a supported Ubuntu or Debian distribution are shown in the following command:
 
-{% highlight ruby %}
+{% highlight text %}
 
 	 $sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
      build-essential chrpath socat cpio python python3 python3-pip python3-pexpect \
@@ -38,7 +39,7 @@ The essential and graphical support packages you need for a supported Ubuntu or 
 {% endhighlight %}
 
 **Create your workspace.**
-{% highlight ruby %}
+{% highlight text %}
 
 $ mkdir -p microzed
 $cd microzed
@@ -49,7 +50,7 @@ git clone -b <branch> <remote_repo>
 
 The branch I am going to use here is Warrior. Checkout Poky - Warrior.
 
-{% highlight ruby %}
+{% highlight text %}
 
 git clone -b warrior git://git.yoctoproject.org/poky   
 
@@ -59,7 +60,7 @@ cd poky <Get inside the poky folder
 
 **Layers we are using**
 
-{% highlight ruby %}
+{% highlight text %}
 
 a) meta-openembedded  and what it provides - read README -  [meta-openembedded](https://github.com/openembedded/meta-openembedded/blob/master/README)
 b) meta-sourcery  and what it provides - read README - [meta-sourcery](https://github.com/MentorEmbedded/meta-sourcery/blob/master/README.md)
@@ -72,7 +73,7 @@ e) meta-xilinx and it provides the definition for the machine microzed-zynq7 - r
 
 Inside the poky folder, checkout these layers.
 
-{% highlight ruby %}
+{% highlight text %}
 
 1)git clone -b warrior https://github.com/openembedded/meta-openembedded.git
 2)git clone -b warrior https://github.com/MentorEmbedded/meta-sourcery.git
@@ -88,7 +89,7 @@ Inside the poky folder, checkout these layers.
 This source command will create a build directory and will cd into build directory. The build directory will have the template for local.conf and bblayers.conf.
 Here is the command.
 
-{% highlight ruby %}
+{% highlight text %}
 
 a) cd poky 
 b) source oe-init-build-env 
@@ -97,7 +98,7 @@ b) source oe-init-build-env
 
 Let's edit bblayers.conf to add layers to the recipe.
 
-{% highlight ruby %}
+{% highlight text %}
 
 $kate conf/bblayers.conf 
 # POKY_BBLAYERS_CONF_VERSION is increased each time build/conf/bblayers.conf
@@ -121,7 +122,7 @@ BBLAYERS ?= " \
 
 Now, edit local.conf to tell what machine architecture we are building for.
 
-{% highlight ruby %}
+{% highlight text %}
 
 $kate conf/local.conf 
 MACHINE ?= "microzed-zynq7"
@@ -132,13 +133,13 @@ Now, you are good to go. Let's build the Secondary Program Loader (SPL) u-boot i
 **Build U-Boot**
 This will create boot.bin, u-boot.img.
 
-{% highlight ruby %}
+{% highlight text %}
 
 $ bitbake virtual/bootloader
 {% endhighlight %}
 
 **Build minimal working uImage, dtb and rootfile system**
-{% highlight ruby %}
+{% highlight text %}
 $bitbake core-image-minimal
 {% endhighlight %}
 
@@ -161,7 +162,7 @@ FPGA is VHDL. [Vitis](https://www.xilinx.com/products/design-tools/vitis.html)
 
 Copy the board definition files at the location - 
 
-{% highlight ruby %}
+{% highlight text %}
 C:\Xilinx\Vivado\2018.1\data\boards\board_files
 {% endhighlight %}
 
@@ -180,7 +181,7 @@ Once you run it, Vivado generates the bit file in runs\impl_1 folder in the proj
 
 **Prepare hardware system**
 
-{% highlight ruby %}
+{% highlight text %}
 
 1) Setup the Jumper settings accurately to do sdboot 
 
@@ -213,7 +214,7 @@ It starts by resetting the processor.
 Mount EXT4 to some <mountpoint>
 unpack the rootfs.tar.gz
 
-{% highlight ruby %}
+{% highlight text %}
 
 tar -C <mountpoint> -xzpf rootfs.tar.gz
 
@@ -223,7 +224,7 @@ tar -C <mountpoint> -xzpf rootfs.tar.gz
 
 By default, my system had the following sdboot value.
 
-{% highlight ruby %}
+{% highlight text %}
 
 sdboot=echo Copying Linux from SD to RAM... && mmcinfo && run mmc_loadbit_fat && fatload mmc 0 0x3000000 ${kernel_image} 
 && fatload mmc 0 0x2A00000 ${devicetree_image} && fatload mmc 0 0x2000000 ${ramdisk_image} && bootm 0x3000000 0x2000000 0x2A00000
@@ -236,7 +237,7 @@ Here you can see, it is trying to boot the ramdisk image i.e. rather than mounti
 
 By the way, when you build, you must be wondering where is uramdisk.image.gz. Basically uramdisk.image.gz is nothing but 
 
-{% highlight ruby %}
+{% highlight text %}
 
 "uramdisk.image.gz" is just another name for "*.cpio.gz.u-boot"
 
@@ -244,20 +245,20 @@ By the way, when you build, you must be wondering where is uramdisk.image.gz. Ba
 
 So, if you don't want to mount ext4 partitiion, you can use ramdisk_image. Otherwise, you can change the sdboot to
 
-{% highlight ruby %}
+{% highlight text %}
 setenv sdboot 'echo Copying Linux from SD to RAM...  && mmcinfo && run mmc_loadbit_fat && fatload mmc 0 0x3000000 ${kernel_image}  && fatload mmc 0 0x2A00000 ${devicetree_image} && bootm 0x3000000 - 0x2A00000'
 {% endhighlight %}
 
 **Loading the fpga bit stream**
 
 I have given a name to the fpga bit stream as custom_ip.bit here.
-{% highlight ruby %}
+{% highlight text %}
 fatload mmc 0 ${loadbit_addr} custom_ip.bit
 fpga loadb 0 ${loadbit_addr} $filesize
 {% endhighlight %}
 
 **Setting the u-boot environment**
-{% highlight ruby %}
+{% highlight text %}
 setenv mmc_loadbit_fat 'echo Loading bitstream from SD/MMC/eMMC to RAM.. && mmcinfo && fatload mmc 0 ${loadbit_addr} ${bitstream_image} && fpga loadb 0 ${loadbit_addr} ${filesize}'
 {% endhighlight %}
 
@@ -272,7 +273,7 @@ This is to identify from where kernel should mount the root file system.
 
 In my case, I did the following in my u-boot.
 
-{% highlight ruby %}
+{% highlight text %}
 
 Zynq> mmc part
 
@@ -285,19 +286,18 @@ Part    Start Sector    Num Sectors     UUID            Type
 {% endhighlight %}
 
 
-Now, this tells me that my ext4-root file system is at mmcblk0p1
-mmcblk 0 is the first sd card and p1 is the second block.
+In this example, the partition table identifies the EXT4 root filesystem as `/dev/mmcblk0p2`. `mmcblk0` is the first MMC device and `p2` is its second partition. Confirm the partition number on your own card; it must match the partition table.
 
 Now, set the u-boot environment variable bootargs, which eventually is passed to the kernel.
 Kernel uses this environment variable to set the console, root file system and other parameters.
 
-{% highlight ruby %}
-set bootargs earlyprintk console=ttyPS0,115200 root=/dev/mmcblk0p1 rw rootwait devtmpfs.mount=1
+{% highlight text %}
+set bootargs earlyprintk console=ttyPS0,115200 root=/dev/mmcblk0p2 rw rootwait devtmpfs.mount=1
 {% endhighlight %}
 
 There are many commands supported by the u-boot. Here is the help.
 
-{% highlight ruby %}
+{% highlight text %}
 
 Zynq> help
 ?       - alias for 'help'
@@ -332,7 +332,7 @@ ext2ls  - list files in a directory (default /)
 
 You can view the current environment variables using the following command.
 
-{% highlight ruby %}
+{% highlight text %}
 
 Zynq> printenv
 baudrate=115200
@@ -380,7 +380,7 @@ stdout=serial@e0001000
 
 U-Boot runs code placed in (processor's) RAM,  although it can also read data from other media. The boot process normally takes place in two steps:
 
-{% highlight ruby %}
+{% highlight text %}
 
 1) Reading the OS image from media (Ethernet, flash, USB, MMC) into RAM
 2) Jumping to the first instruction of the image in RAM
@@ -390,19 +390,19 @@ U-Boot runs code placed in (processor's) RAM,  although it can also read data fr
 In order to read an image from an MMC card formatted in FAT, 
 the command is:
 
-{% highlight ruby %}
+{% highlight text %}
 fatload mmc <dev>[:partition] <loadAddress> <bootfilename>
 {% endhighlight %}
 
 **bootm**
 This command starts a kernel image running.
-{% highlight ruby %}
+{% highlight text %}
 bootm <address of kernel> <address of ramdisk> <address of dtb>
 {% endhighlight %}
 
 In our case, we are not using ramdisk so '-' in the middle.
 
-{% highlight ruby %}
+{% highlight text %}
 bootm <address of kernel> - <address of dtb>
 {% endhighlight %}
 

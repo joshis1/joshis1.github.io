@@ -1,17 +1,16 @@
 ---
 layout: post
-title:  "Zedboard QSPI Uboot"
+title:  "Reading and Writing QSPI Flash with U-Boot on Zynq"
 date:   2020-04-03 14:13:31 +1300
 categories: Embedded_Linux
+description: A historical Zynq U-Boot walkthrough for loading, writing, verifying, and booting kernel and device-tree images from QSPI.
 ---
-This article is all about flashing device tree, linux kernel image to QSPI using uboot.
-Also, we will read back the device tree and linux kernel image from QSPI NOR flash.
-After reading back, we will boot the linux kernel.
+This historical walkthrough records how I loaded a kernel and device tree from an SD card, wrote them to QSPI NOR flash with U-Boot, read them back for verification, and booted the kernel on a Zynq board. Confirm flash offsets, image sizes, and memory addresses for your hardware before running any write or erase command.
 
 **What is the DRAM memory size?**
 In order to find the DRAM memory size in uboot, we can run the following command.
 
-{% highlight ruby %}
+{% highlight text %}
 
 Zynq> bdinfo
 arch_number = 0x00000000
@@ -45,7 +44,7 @@ So, we have 1 Gigabytes RAM.
 
 **List the directory contents of the SD card formatted in FAT**
 
-{% highlight ruby %}
+{% highlight text %}
 
 Zynq> fatls mmc 0
             System Volume Information/
@@ -71,7 +70,7 @@ The 6 zeroes is nothing but 6*4 = 24 bits or 2^24 and 0x3.
 Next, we know that 2^20 is 1 Mb, so it is 2^4 * 0x3 = 48Mb. So, we are placing the UImage at the offset of 48Mbytes
 in DRAM. 
 
-{% highlight ruby %}
+{% highlight text %}
 fatload mmc 0 0x3000000 ${kernel_image}
 {% endhighlight %}
 
@@ -79,7 +78,7 @@ Now, flash the QSPI NOR
 
 Probe the SPI Nor.
 
-{% highlight ruby %}
+{% highlight text %}
 Zynq>  sf probe 0 0 0
 SF: Detected s25fl128s_64k with page size 256 Bytes, erase size 64 KiB, total 16 MiB
 {% endhighlight %}
@@ -87,13 +86,13 @@ SF: Detected s25fl128s_64k with page size 256 Bytes, erase size 64 KiB, total 16
 We cannot directly onto QSPI Nor flash, first we need to erase the block and then only we can write the
 data. So, let's first erase 8Mb for kernel image. I know this pretty big. In theory, my zedboard kernel image size is just a little over 4 Mb. So, 8 Mb is pretty safe. 
 
-{% highlight ruby %}
+{% highlight text %}
 sf erase 0 0x800000  //Erase 8MB from QSPI offset 0x0
 {% endhighlight %}
 
 Write the uImage i.e. kernel image to the QSPI.
 
-{% highlight ruby %}
+{% highlight text %}
 sf write 0x3000000 0 0x800000  //written to QSPI offset 0 and read from RAM memory 0x3000000
 {% endhighlight %}
 
@@ -101,13 +100,13 @@ Now, let's readback the uImage from SPI NOR and store that uImage onto memory lo
 0x8000000 i.e. 0x8 and 6 zeroes. i.e. 2^3 and 6*4 = 24 or 2^24. This means 2^27 or 2^7 *2^20 = 128Mb.
 So, now we are reading the uImage from QSPI and store at the memory location - 128Mb from the base address i.e 0x000. 
 
-{% highlight ruby %}
+{% highlight text %}
 sf read  0x8000000 0  0x800000  // read back into memory 0x8000000  -- kernel image read
 {% endhighlight %}
 
 Now, check wether the uImage is there in the memory address 0x8000000 or not.
 
-{% highlight ruby %}
+{% highlight text %}
 
 Zynq> md 0x8000000
 00010000: 56190527 a7f99ceb 64ad585e 20843f00    '..V....^X.d.?.
@@ -133,7 +132,7 @@ Similarly, read the device tree.
 
 **Load device tree from FAT**
 
-{% highlight ruby %}
+{% highlight text %}
 
 fatload mmc 0 0x2A00000 ${devicetree_image}
 
@@ -145,12 +144,12 @@ Since, we have already consumed first 8Mb from QSPI for uImage purpose, we shoul
 device tree after 8Mb in QSPI. Thus, the offset should be 8Mb.
 
 **Erase 4Mb for device tree into QSPI**
-{% highlight ruby %}
+{% highlight text %}
 sf erase 0x800000  0x400000 //erase 4MB for Device Tree
 {% endhighlight %}
 
 **Flash/write device tree into QSPI**
-{% highlight ruby %}
+{% highlight text %}
 sf write 0x2A00000 0x800000  0x400000  //written to QSPI from RAM memory 0x2A00000
 {% endhighlight %}
 
@@ -161,12 +160,12 @@ Thus, any memory address 128Mb + 5Mb = 133Mb should be fine. Here, I have taken 
 140Mb. Thus, 140 Mb is nothing 0x8C and 5 zeroes. The 0x8C equals to 140 in decimal. 
 
 **Flash/write device tree into QSPI**
-{% highlight ruby %}
+{% highlight text %}
 sf read  0x8C00000 0x800000 0x400000 //device tree read from QSPI offset 0x800000 and how much to read i.e. 0x400000 ~ 4Mb read.
 {% endhighlight %}
 
 **Verify the device tree image using memory dump**
-{% highlight ruby %}
+{% highlight text %}
 
 Zynq> md 0x8C00000
 00180000: edfe0dd0 752e0000 38000000 302a0000    .......u...8..*0
@@ -192,7 +191,7 @@ Zynq> md 0x8C00000
 The command here is bootm "uImage address"  "rootfs address if you have otherwise put -"  "device tree address".
 In my case, I don't have rootfs address. Thus, I am putting '-'.
 
-{% highlight ruby %}
+{% highlight text %}
 bootm 0x8000000 - 0x8C00000
 {% endhighlight %}
 
@@ -200,7 +199,7 @@ bootm 0x8000000 - 0x8C00000
 Similar to bootm, you can use bootelf to run an elf executable.
 Suppose an elf is stored at the memory address 0x1000000.
 
-{% highlight ruby %}
+{% highlight text %}
  bootelf 0x1000000
 {% endhighlight %}
 

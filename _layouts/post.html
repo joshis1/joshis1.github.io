@@ -1,21 +1,29 @@
 <!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
   {% include head.html %}
-
-  {% include header.html %}
-
   <body>
-    <section class="post-wrapper">
-      <p class="post-date">{{ page.date }}</p>
-    </section>
-
-    <img src="/assets/img/Home_Page.jpg" alt="Home Page">   
-
-    <article class="post-content">
-      {{content}}
-    </article>
+    {% include header.html %}
+    <main class="post-main">
+      <header class="post-heading">
+        {% if page.categories and page.categories.size > 0 %}
+          <a class="eyebrow" href="{{ '/categoryview/' | relative_url }}#{{ page.categories.first | slugify }}">{{ page.categories.first | replace: '_', ' ' }}</a>
+        {% endif %}
+        <h1>{{ page.title | escape }}</h1>
+        <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time><span aria-hidden="true"> · </span>{{ content | number_of_words }} words</p>
+        {% assign post_year = page.date | date: "%Y" | plus: 0 %}
+        {% if post_year < 2022 %}
+          <p class="historical-note"><strong>Historical walkthrough.</strong> This article reflects the software and environment available when it was written. Verify versions, commands, and security guidance before applying it today.</p>
+        {% endif %}
+      </header>
+      <article class="post-content">
+        {{ content }}
+      </article>
+      <nav class="post-end" aria-label="More writing">
+        <a href="{{ '/' | relative_url }}">← All writing</a>
+        <a href="{{ '/categoryview/' | relative_url }}">Browse topics →</a>
+      </nav>
+    </main>
+    {% include footer.html %}
   </body>
-
-  {% include footer.html %}
 </html>

@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Zedboard Yocto Install Packages"
+title:  "Adding Packages to a Yocto Image"
 date:   2020-04-03 18:13:31 +1300
 categories: Embedded_Linux
+description: A short, version-specific note on finding recipes and adding packages to a Yocto image.
 ---
 
-This article is all about installing extra packages in Yocto build.
-This is a very short article on how to install extra packages in Yocto.
+This short, historical note shows how I added packages to a Yocto image. Recipe names and override syntax vary by Yocto release; this example is from the Warrior-era setup.
 For e.g, I would like to add curl and node js package in Yocto.
 
 **Check whether those packages are already available or not**
@@ -15,7 +15,7 @@ For e.g. run the command bitbake-layers show-recipes and redirect its output to 
 Next, open your favourite editor and find the package. There is a good chance it is already
 available and its the matter of compiling and installing that package to your root file system.
 
-{% highlight ruby %}
+{% highlight text %}
 
 $bitbake-layers show-recipes  > recipes.txt
 
@@ -29,7 +29,7 @@ Also, you can check using the following link -
 
 First define in local.conf file what packages you would like to install.
 
-{% highlight ruby %}
+{% highlight text %}
  
  WEB_PACKAGES = " \
   curl \
@@ -39,14 +39,14 @@ First define in local.conf file what packages you would like to install.
 
 Next append those packages.
 
-{% highlight ruby %}
+{% highlight text %}
 IMAGE_INSTALL_append = " ${WEB_PACKAGES}"
 {% endhighlight %}
 
 
 Now, build your image again.
 
-{% highlight ruby %}
+{% highlight text %}
 $bitbake core-image-minimal
 {% endhighlight %}
 

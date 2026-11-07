@@ -13,14 +13,17 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Shreyas Joshi - blogging channel.
+title: Shreyas Joshi | Leadership, Java & Systems
 email: shreyasjoshi15@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Shreyas Joshi blogging channel.
+  Notes on technical leadership, Java, software design, Linux, and the systems
+  behind reliable products.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://joshis1.github.io"
+github_username: joshis1
+linkedin_url: "https://www.linkedin.com/in/joshis1/"
+author:
+  name: Shreyas Joshi
 
 # Build settings
 markdown: kramdown

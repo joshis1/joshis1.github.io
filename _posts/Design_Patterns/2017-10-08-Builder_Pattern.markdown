@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Builder_Pattern"
+title:  "The Builder Pattern in C++"
 date:   2017-10-08 10:13:31 +1300
 categories: Design_Patterns
+description: A C++ example of assembling tuner configurations with builders and an optional director.
 ---
 
-This article is all about “Builder Pattern”. The “Builder Pattern” falls under
-the category of creation software design pattern.
+The Builder pattern separates the construction of a complex object from its representation. This article uses tuner configurations to illustrate a classic builder and director arrangement.
 
 **What is a builder pattern?**
 
@@ -90,7 +90,7 @@ Let’s see the UML diagram here.
   will call the build operations of the terrestrial builder to create a final product.
   Interface or plan of the tuner object.
 
-{% highlight ruby %}
+{% highlight cpp %}
 
   class Ituner
   {
@@ -147,7 +147,7 @@ Let’s see the UML diagram here.
 
   Here is the abstract builder class.
 
-  {% highlight ruby %}
+  {% highlight cpp %}
 
   class ITunerBuilder
   {
@@ -170,7 +170,7 @@ Let’s see the UML diagram here.
 
   Here is the concrete tuner builder – terrestrial type.
 
-  {% highlight ruby %}
+  {% highlight cpp %}
 
   class tunerTerrestrialBuilder: public ITunerBuilder
   {
@@ -204,7 +204,7 @@ Let’s see the UML diagram here.
 
 Here is the concrete tuner builder – satellite type.
 
-{% highlight ruby %}
+{% highlight cpp %}
 class tunerSatelliteBuilder: public ITunerBuilder
 {
   public:
@@ -237,7 +237,7 @@ class tunerSatelliteBuilder: public ITunerBuilder
 
 Let’s make a director/Engineer to take up the order of a client.
 
-{% highlight ruby %}
+{% highlight cpp %}
 
 class tunerEngineer
 {
@@ -266,7 +266,7 @@ class tunerEngineer
 
 Now, the main file for a client to test the builder pattern.
 
-{% highlight ruby %}
+{% highlight cpp %}
 
 int main(void)
 {

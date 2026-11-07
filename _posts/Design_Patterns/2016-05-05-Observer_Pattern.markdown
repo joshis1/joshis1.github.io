@@ -1,21 +1,18 @@
 ---
 layout: post
-title:  "Observer_Pattern"
+title:  "The Observer Pattern in C++ and Qt"
 date:   2016-01-11 14:13:31 +1300
 categories: Design_Patterns
+description: An event-notification example of the Observer pattern, with a publisher, subscribers, and implementation trade-offs.
 ---
 
-This article is all about ‘Observer Pattern’. This pattern is useful when the
-dispatcher(Publisher) wants to notify the updates to all of the interested
-clients. In short, we have a server that has all of the information, and it wants to post the information to all of the clients whenever the data changes.
-The client needs to register with the server to get notification of any event
-updates. Here the server is commonly known as the subject, and the client is
-known as the observer. Also, we can say that subject is the publisher of the
-information, and the observer is the subscriber of the information. This will be made clearer once we will describe the problem.
+The Observer pattern lets a subject notify interested observers when its state changes. A subject can add or remove observers at runtime; the observers depend on the subject's notification contract rather than on its concrete implementation.
 
-[note] - I have demonstrated this pattern using both C++ and Python.
+The main example below uses C++ and Qt. A separate Python example is linked near the end.
 
-**Problem** – In the broadcasting world, whenever the default settings of the
+## Example: broadcasting settings
+
+In a set-top box, changes to default
 baud rate, video aspect ratio, and the default volume level needs to be
 changed, the broadcast server will send the information to the client – a Set -
 top box. So, the software component in the Set -top box, which gets to know
@@ -23,7 +20,7 @@ any updates is called the Update Manager, and the interested clients here are
 – network component – for baud rate, display component for aspect ratio,
 and the av component for the default volume level.
 
-**Solution – Observer Pattern** -
+## The publisher and subscribers
 The update Manager should notify all of the clients registered with it. These
 clients can be network component , display component , and av component in
 this example. Also, we should have a flexibility of adding or deleting these
@@ -36,15 +33,16 @@ Let’s make a UML representation of it .
 
 <img src="/assets/img/ObserverPattern_UML.png" alt="ObserverPattern_UML">
 
-So, let’s make an interface – subject class –
+The publisher interface defines registration and state changes:
 
-{% highlight ruby %}
+{% highlight cpp %}
 
 class IPublisher
 {
  public:
-    virtual void registerObserver(ISubsrciber * observer) = 0;
-    virtual void unregisterObserver(ISubsrciber * observer) = 0;
+  virtual ~IPublisher() = default;
+    virtual void registerObserver(ISubscriber * observer) = 0;
+    virtual void unregisterObserver(ISubscriber * observer) = 0;
     virtual void setBaudRate(int newBaudRate) = 0;
     virtual void setAspectRatio(int newAspectRatio) = 0;
     virtual void setVolumeLevel(int newVolume) = 0;
@@ -55,25 +53,13 @@ class IPublisher
 {% endhighlight %}
 
 
-Do remember that the interface is the class that has no fields, and all the
-methods are pure virtual only. This interface has the following methods.
-1. register observer
-2. unregister observer
-3. Event notifications like — baud rate change, aspect ratio Change, and
-volume level change.
-For the clarity, I have three methods here for all the updates – baud rate,
-aspect ratio, and volume level.
-I have a protected member – notifyObserver() – this will be internally be used
-to notify the observers on any event updates like baud rate, aspect ratio, and
-volume level. You might have noted that the server is dependent on the
-observers. The publisher needs to maintain the list of subscribers here. Also,
-the publisher needs to call the update routine of the subscriber.
-Let’s have a look on the subscriber interface.
+An interface in C++ is a design convention, not a special language construct. A virtual destructor is important when objects may be deleted through a base-class pointer. The publisher keeps the observer list and calls each observer's update operation when state changes.
 
-{% highlight ruby %}
-class ISubsrciber
+{% highlight cpp %}
+class ISubscriber
 {
   public:
+  virtual ~ISubscriber() = default;
       virtual void update(int baudRate, int AspectRatio, int VolumeLevel) = 0;
 };
 
@@ -85,8 +71,8 @@ implement the update() method. Here is the concrete subscriber class. Here,
 we have created a client by registering it with the server. So, the constructor
 of client will register with the server.
 
-{% highlight ruby %}
-class UpdateReceiver: public ISubsrciber
+{% highlight cpp %}
+class UpdateReceiver: public ISubscriber
 {
   private:
     int m_baudRate;
@@ -116,6 +102,8 @@ public:
 
 {% endhighlight %}
 
+int UpdateReceiver::updateReceiverTracker = 0;
+
 Now, the Server/Publisher – the publisher needs to maintain the list of
 observers. The observer gets added in the list when the register() method of
 publisher is invoked. Here, we have registered the client to server on creation
@@ -124,11 +112,11 @@ the publisher. So, whenever the event is updated, it notifies to all the
 observers. The interface to notify the observers is update(). Thus, a concrete
 client needs to implement the update() method.
 
-{% highlight ruby %}
+{% highlight cpp %}
 class UpdateManager: public IPublisher
 {
   private:
-    QList<ISubsrciber * > subscribers;
+    QList<ISubscriber * > subscribers;
     int m_baudRate;
     int m_aspectRatio;
     int m_volumeLevel;
@@ -138,15 +126,18 @@ class UpdateManager: public IPublisher
       qDebug()<<"Update Manager --- Server/Subject Initialized";
       subscribers.clear();
     }
-    void registerObserver(ISubsrciber * observer)
+    void registerObserver(ISubscriber * observer)
     {
       subscribers.append(observer);
     }
-    void unregisterObserver(ISubsrciber * observer)
+    void unregisterObserver(ISubscriber * observer)
     {
       int index = subscribers.indexOf(observer);
-      subscribers.removeAt(index);
-      qWarning()<<"Removed the subscriber Index = "<<index;  
+      if (index >= 0)
+      {
+        subscribers.removeAt(index);
+      }
+      qWarning()<<"Removed the subscriber Index = "<<index;
     }
    void setBaudRate(int newBaudRate)
    {
@@ -166,7 +157,7 @@ class UpdateManager: public IPublisher
 protected:
    void notifyObserver()
    {
-     foreach( ISubsrciber * observer, subscribers )
+     foreach( ISubscriber * observer, subscribers )
      {
        observer->update(m_baudRate,m_aspectRatio,m_volumeLevel);
      }
@@ -179,14 +170,14 @@ Here is the main(). The two clients are created. They both will get the
 notification, whenever the event is updated. However, at any time we can
 deregister any client . Also, we can add/register more clients.
 
-{% highlight ruby %}
+{% highlight cpp %}
 
 int main(int argc, char * argv[])
 {
   QCoreApplication a(argc, argv);
   IPublisher * AV_UpdateMgr = new UpdateManager();
-  ISubsrciber * AV_UpdateReceiver = new UpdateReceiver(AV_UpdateMgr);
-  ISubsrciber * NW_UpdateReceiver = new UpdateReceiver(AV_UpdateMgr);
+  ISubscriber * AV_UpdateReceiver = new UpdateReceiver(AV_UpdateMgr);
+  ISubscriber * NW_UpdateReceiver = new UpdateReceiver(AV_UpdateMgr);
   /** Server Updating the values ** /
   AV_UpdateMgr->setBaudRate(1000);
   AV_UpdateMgr->setAspectRatio(43);

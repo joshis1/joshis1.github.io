@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Callback from C++ to Javascript function - QtWebkit"
+title:  "Calling JavaScript from C++ with Qt WebKit"
 date:   2015-04-12 14:13:31 +1300
 categories: cpp
+description: Two historical Qt WebKit techniques for calling JavaScript from C++, with lifecycle and loading considerations.
 ---
 This article discusses on how to call a JavaScript function from C++ using
 Qt Framework. This framework uses Qt-Webkit. Currently, there are two ways
@@ -25,7 +26,7 @@ d) In the Javascript, connect the signal to the Javascript function slot.
 Here is the syntax to connect.
 
 
-{% highlight ruby %}
+{% highlight text %}
 
 <Javascript_window_object>.<signal_name>.connect(<Javascript function name>)
 
@@ -38,7 +39,7 @@ Let ’s see t he real example now.
 
 Here is the simple form - HTML/JavaScript
 
-{% highlight ruby %}
+{% highlight text %}
 
 <html>
 <head>
@@ -65,7 +66,7 @@ myoperations.alert_script_signal.connect(JavaScript_function);
 
 Here is the C++,Qt Code.
 
-{% highlight ruby %}
+{% highlight text %}
 
 #include <QtGui/QApplication>
 #include <QApplication>
@@ -134,7 +135,7 @@ Here is the sample code.
 
 Form code - HTML/Javascript
 
-{% highlight ruby %}
+{% highlight text %}
 
 <html>
 <head>
@@ -161,7 +162,7 @@ myoperations.firecb(JavaScript_function);
 
 Here is the QT- main.cpp file .
 
-{% highlight ruby %}
+{% highlight text %}
 
 #include <QtGui/QApplication>
 #include <QApplication>

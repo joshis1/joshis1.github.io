@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Submitting my first kernel patch"
+title:  "Submitting My First Linux Kernel Patch"
 date:   2020-03-05 15:23:31 +1300
 categories: Embedded_Linux
+description: Notes from preparing, revising, and emailing a first Linux kernel patch, including historical workflow caveats.
 ---
 
 This is all about my journey to submit my first kernel patch. Here I have discussed all the important things you must know before you submit your kernel patch and also respond to the feedbacks.
@@ -13,20 +14,20 @@ Kernel community uses a very different coding style and is a bit different. But,
 
 For e.g, if you have changed the file - da9062-core.c
 
-{% highlight ruby %}
+{% highlight text %}
 perl scripts/checkpatch.pl  -f drivers/mfd/da9062-core.c
 {% endhighlight %}
 
 In order to run checkpatch.pl, you need to install a few python modules.
 
-{% highlight ruby %}
+{% highlight text %}
 $sudo apt-get install python-pip
 $pip install gitpython
 {% endhighlight %}
 
 Sometimes, I get an error that my pip version is older and I need to upgrade it. The best way to upgrade pip version is to not use sudo command but the following command.
 
-{% highlight ruby %}
+{% highlight text %}
  $pip install --upgrade --user pip
 {% endhighlight %}
  
@@ -36,7 +37,7 @@ Another way of installing pip package is
 
 **using virtual environment.**
 
-{% highlight ruby %}
+{% highlight text %}
 $sudo apt install virtualenv
 
 $virtualenv venv
@@ -52,7 +53,7 @@ $virtualenv -p /usr/bin/python2.7 venv
 One need to sign-off using git commit -s.
 By signing, you agree with the kernel policies.
 
-{% highlight ruby %}
+{% highlight text %}
 
 $git commit -s 
 
@@ -60,7 +61,7 @@ $git commit -s
 
 **How to give git commit message?**
 
-{% highlight ruby %}
+{% highlight text %}
 
  mfd: da9062: add support for interrupt polarity defined in device tree
     
@@ -74,7 +75,7 @@ Here mfd:da9062 is the file showing drivers/mfd/da9062-core.c
 
 In case, you are not happy about your commit, you can again commit the code using.
 
-{% highlight ruby %}
+{% highlight text %}
 
 $git commit --amend <files update>
 
@@ -82,7 +83,7 @@ $git commit --amend <files update>
 
 **How to generate a patch file?**
 
-{% highlight ruby %}
+{% highlight text %}
 
 $git format-patch HEAD~<number of commits to convert to patches>
 
@@ -92,7 +93,7 @@ $git format-patch HEAD~<number of commits to convert to patches>
 
 Generally the maintainers are quite keen to see the revision history as it helps them to review. It is best to hand modify the file generated from ‘git format-patch” to add the version history to the patch. It is not part of the commit message and should go below the ‘---’ line and above the information regarding the files touched by the patch and the number of changes, so in my case:
 
-{% highlight ruby %}
+{% highlight text %}
 
 The da9062 interrupt handler cannot necessarily be low active.
 
@@ -119,7 +120,7 @@ drivers/mfd/da9062-core.c | 43 ++++++++++++++++++++++++++++++++++++---
 
 **How to see maintainers list for the changes you made?**
 
-{% highlight ruby %}
+{% highlight text %}
 
 $perl scripts/get_maintainer.pl  <patch file>
 
@@ -129,7 +130,7 @@ $perl scripts/get_maintainer.pl  <patch file>
 
 The patch file can be applied using the command.
 
-{% highlight ruby %}
+{% highlight text %}
 
 $git am <patchfile>
 
@@ -139,7 +140,7 @@ $git am <patchfile>
 
 Install git-email
 
-{% highlight ruby %}
+{% highlight text %}
 $sudo apt-get install git-email
 {% endhighlight %}
 
@@ -153,7 +154,7 @@ Please refer to this link.
 
 Setting up an email client
 
-{% highlight ruby %}
+{% highlight text %}
 ~/.gitconfig
 [sendemail]
   ; setup for using git send-email; prompts for password
@@ -165,14 +166,14 @@ Setting up an email client
 
 
 **Example to send the patch -**
-{% highlight ruby %}
+{% highlight text %}
 $git send-email  --cc linux-kernel@vger.kernel.org  C:\Users\xx\Documents\0001-mfd-da9062-Add-support-for-interrupt-polarity-def.patch
 {% endhighlight %}
 
 
 **Example to re-send the patch, basically replying on to the email using revised patch.**
 
-{% highlight ruby %}
+{% highlight text %}
 $git send-email  --cc linux-kernel@vger.kernel.org --in-reply-to AM6PR10MB22635CBCBF559AEB9A5C2BFF80120@AM6PR10MB2263.EURPRD10.PROD.OUTLOOK.COM C:\Users\xx\Documents\0001-mfd-da9062-Add-support-for-interrupt-polarity-def.patch
 {% endhighlight %}
 
@@ -181,7 +182,7 @@ There is another email client called - mutt, but I won't suggest using mutt beca
 
 Here is the mutt.rc settings
 
-{% highlight ruby %}
+{% highlight text %}
 set ssl_starttls=yes
 set ssl_force_tls=yes
 set imap_user = 'email@gmail.com'
@@ -204,7 +205,7 @@ set imap_keepalive = 900
 
 This is pretty helpful and it will save your time. After this you don't have to run 'git branch' to know what branch you are working at. Add this line to your bash.rc in order to see what branch you are working in?
 
-{% highlight ruby %}
+{% highlight text %}
 PS1="\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\[\033[01;34m\]\$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')\[\033[00m\]\$"
 {% endhighlight %}
 

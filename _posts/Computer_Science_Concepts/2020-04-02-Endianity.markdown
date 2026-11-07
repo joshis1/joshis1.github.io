@@ -1,61 +1,31 @@
 ---
 layout: post
-title:  "Endianity"
+title:  "Byte Order (Endianness): Big-Endian vs Little-Endian"
 date:   2020-04-02 14:13:31 +1300
 categories: Computer_Science_Concepts
+description: A practical explanation of byte order, how it affects multi-byte values, and why network protocols specify an encoding.
 ---
 
-This article is all about endianity. Endianity is all about how a word is stored in the computer memory.
-There are two types of endianity - Big Endian and Little Endian.
+Endianness describes the order in which the bytes of a multi-byte value are stored in memory. It does not change the value itself; it describes how that value is represented across byte addresses.
 
-**What is Big Endian?**
+## Big-endian and little-endian
 
-The way human beings write can be considered Big Endian. We first write MSB and then write LSB.
-Basically, the lower address has MSB and the higher address has LSB.
+Consider the 32-bit value `0x12345678`. If its first byte is stored at the lowest address:
 
-**What is Little Endian?**
+| Byte address order | Bytes stored |
+| --- | --- |
+| Big-endian | `12 34 56 78` |
+| Little-endian | `78 56 34 12` |
 
-The little endian is liked by the machines and it is opposite to how human beings do write.
-Basically, Least significant byte is written first and then Most significant byte is written.
-In computer science terminology, least significant byte is written in the lower address and
-the most significant byte is written in the higher address. 
+Big-endian stores the most significant byte at the lowest address. Little-endian stores the least significant byte there. Endianness applies to values made of multiple bytes; a single byte has no byte order.
 
-**Why do machines like little Endian?**
-This is because addition, subtraction operations are easier in little endian.
-Why because we start adding from the LSB and then we carry forward it to the next MSB.
-So, in general while machine is adding the LSB, it can fetch the MSB. Thus, it can do things in 
-parallel and this will make things faster. In general, human beings like big endian and machines like
-little endian.
+Neither format is inherently more natural or universally faster. Processor architecture, instruction set, and workload determine performance. The byte order used to store an integer is separate from the way arithmetic is performed on that integer.
 
-**Does byte is big endian or little endian?**
+## Why byte order matters
 
-There is no big endian or little endian within the byte. The byte is the fixed minimal data.
-In short, a 32 bit address i.e. 4 bytes are arranged either in the big endian or little endian.
-In big endian, the the most significant byte is stored in the lower address and the least significant byte
-is stored in the higher address.
+Programs that exchange binary data need an agreed representation. If a sender and receiver interpret the same bytes using different byte orders, a multi-byte value can be decoded incorrectly. Text formats and protocols that define individual bytes avoid some ambiguity, but binary formats must specify field width, byte order, and often signedness as well.
 
-**Why Endianity matters?**
-Assume two machines or two different processor architecture wants to communicate with each other.
-Let's assume machine A processor architecture is big endian and machine B processor architecture is little endian.
-Now, if machine A sends data 0x10FF to machine B. The machine B will interpret data as 0XFF10. So, this will be a
-big problem. So, it is very important to know endianity. How do we tackle this issue? The answer is serialisation.
-By serialising, the information is stored in a particular format for e.g. big endian and when the machine receives it uses de-serialising to re-interpret the information correctly. For e.g. in network, the network byte address is 
-stored in big endian. However, we use htonl() which reverses the byte order in little endian machine. There is no 
-operations in big endian. Basically, htonl() is used to convert host unsigned long byte address to network unsigned
-long byte address. This is often used with IPv4 address. The htons() is used to convert host unsigned short byte address to network unsigned short byte address. This is often used with tcp port or udp port numbers.
+Internet protocols commonly use **network byte order**, which is big-endian for multi-byte integer fields. In C, `htons` and `htonl` convert 16-bit and 32-bit values from host byte order to network byte order; `ntohs` and `ntohl` convert them back. These functions convert representation when needed and are effectively no-ops on hosts that already use network byte order. They do not convert an IP address string into an address; use the appropriate address-parsing API for that.
 
-**Why do they call htonl?**
-Basically htonl() means host to network. This means whatever the data you have in your host machine convert into 
-a format that network will understand. The network understands big endian. So, basically, it converts your machine 
-data i.e host machine data to big endian. If your machine/host is already big endian then it won't have any affects.
-The htonl is basically host to network unsigned long byte used for IPv4 address. 
-The htons is basically host to network unsigned short byte used for TCP/UDP port number.
-
-**What is a chunk in computer science?**
-
-A chunk is a little information from a big information.
-Imagine a gif image, a chunk will be a section of information like header 
-and you read chunk by chunk. In between the chunk the data lives.
-
-This brings an end to this article. 
+For portable file formats and network messages, prefer documented serialization APIs over copying a native integer's in-memory bytes. That makes the representation explicit and avoids assumptions about the machine running the code.
 
