@@ -1,0 +1,96 @@
+---
+layout: post
+title: "Setting Up Visual Studio Code for JavaScript"
+description: "A historical guide to setting up Visual Studio Code and a browser-based workflow for JavaScript."
+date:   2020-03-05 14:13:31 +1300
+categories: JavaScript
+---
+
+This historical guide records a Visual Studio Code setup on Ubuntu 18.04. VS Code,
+Node.js, and extensions change over time; check the current documentation and review an
+extension's publisher, permissions, and maintenance status before installing it.
+
+Install a supported Node.js release using the current instructions for your operating
+system. The command below is an example from the original Ubuntu environment and may
+install an outdated version:
+
+{% highlight bash %}
+$sudo apt-get install nodejs
+{% endhighlight %}
+
+The screenshots show the interface and extensions available when this article was
+written; menu names and marketplace listings may have changed.
+
+## Extensions
+Visual Studio Code features can be added through extensions in the Visual Studio
+Marketplace.
+
+<img src="/assets/img/VSCode_Extension.png" alt="Visual Studio Code Extension">
+
+## LiveServer extension
+The Live Server extension can serve local files and refresh the browser when files change.
+Its behavior depends on the extension version and project configuration.
+
+<img src="/assets/img/LiveServer.png" alt="Live Server Extension">
+
+## Use Standard Javascript version i.e. ECMA 6
+The screenshot documents an older ECMAScript-related extension. Modern VS Code includes
+JavaScript and TypeScript language support; confirm that any additional extension is
+still maintained and needed.
+
+Here is the screen shot
+
+<img src="/assets/img/JS_ES6_Install.png" alt="Javascript ES6 Installation">
+
+## Auto Close tag
+This will help to automatically close the tag.
+Here is the description about it.
+[Auto Close tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
+
+## Auto rename tag
+This will help to automatically rename the closing or opening tag when
+you change one of the tag. Here is the description about it.
+
+[Auto rename tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+
+## babel ES6/ES7
+This extension link is retained for historical reference. Prefer current language tooling
+and check that any linter or syntax-highlighting extension is actively maintained.
+
+[babel ES6/ES7](https://marketplace.visualstudio.com/items?itemName=dzannotti.vscode-babel-coloring)
+
+## Settings that will help your project
+a) Auto Save the changes  - after certain delay.
+
+<img src="/assets/img/afterDelay.png" alt="After delay settings">
+
+b) wordwrap turn to on - so that the long line falls back to next line.
+
+<img src="/assets/img/wordwrap.png" alt="word wrap settings">
+
+c) code-runner.clearPreviousOutput: true - so that you don't have to clear the terminal output all the time manually.
+
+<img src="/assets/img/CodeRunner.png" alt="Code Runner clear previous output settings">
+
+Here is the working example code that runs on the IDE.
+
+<img src="/assets/img/vscode_running_example.png" alt="Code Runner clear previous output settings">
+
+Also, you could use the run and debug button to run the code.
+
+<img src="/assets/img/VSCode_Run_Debug.png" alt="VS Code run and debug">
+
+The original screenshots were captured on Ubuntu 18.04.
+
+Another great resource for javascript programming is the online IDE.
+This is my favourite IDE.
+
+[codepen](https://codepen.io/pen/)
+
+## Resources to learn javascript
+FreeCodeCamp and the MDN JavaScript Guide are useful starting points for learning and
+practice.
+
+## Documentation for javascript
+- [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+- [MDN JavaScript Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)

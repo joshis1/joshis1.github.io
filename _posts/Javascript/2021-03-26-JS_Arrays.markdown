@@ -1,0 +1,261 @@
+---
+layout: post
+title: "JavaScript Arrays and Common Methods"
+description: "Examples of JavaScript array indexing, iteration, mutation, and methods such as map, filter, and reduce."
+date:   2021-03-26 14:13:31 +1300
+categories: JavaScript
+---
+
+JavaScript arrays are objects accessed through references. Their elements can be changed,
+and many array methods mutate the original array while others return a new one.
+
+## Array length
+In order to find the length of an array, you can simply use its property called length. Here is an example.
+
+{% highlight javascript %}
+
+  var array = [1,2,3];
+  console.log(array.length);
+
+{% endhighlight %}
+
+## Changing or accessing elements or arrays
+So, if you come from C background then you know that you can access the element of an array using index. This is same in javascript. Also, you change the value if you know the index of the element to change. Here is an example.
+
+{% highlight javascript %}
+
+  var array = [1,2,3];
+  console.log(array[0]); // 1 accessing first element.
+  array[1] = 5; // changing the second element to 5.
+  console.log(array); // [1,5,3]
+  console.log(array.length); // 3
+  // Assigning index 5 creates a sparse array with empty slots at indices 3 and 4.
+  array[5] = 100;
+  console.log(array); // [1, 5, 3, <2 empty items>, 100]
+  console.log(array[3]); // undefined
+
+{% endhighlight %}
+
+## Looping through Arrays
+There is a built-in function with arrays in order to loop through each elements of an array. The built-in method is called forEach. It accepts a function as an argument. Let's check this out.
+
+
+{% highlight javascript %}
+
+  var array = [1,2,3,4,6,100];
+  array.forEach(function(element, index, array) {
+    console.log('index ' + index);
+    console.log('value ' + element);
+  });
+
+{% endhighlight %}
+
+Also, you can simply ignore the function arguments index and array.
+
+{% highlight javascript %}
+
+  var array = [1,2,3,4,6,100];
+  array.forEach(function(element) {
+    console.log(element);  // 1, 2, 3, 4, 6, 100
+  });
+
+{% endhighlight %}
+
+## Appending an element to an array
+You can append an element to an array using push() built in function of arrays. Here is an example. Let's say we want to append 'Mango' to our existing array.
+
+
+{% highlight javascript %}
+
+  var array = [1,2,3,4,6,100];
+  array.push('Mango');
+  console.log(array); // [1, 2, 3, 4, 6, 100, "Mango"]
+
+{% endhighlight %}
+
+## Retrieve and remove the last element of an array
+Like `push()`, `pop()` is an array method. It removes and returns the last element; it
+does not accept an element argument.
+
+{% highlight javascript %}
+
+var array = [1,2,3,4,6,100, "Mango"];
+var element = array.pop(); // pop() takes no element argument.
+console.log(element); // "Mango"
+console.log(array); // [1, 2, 3, 4, 6, 100]
+
+{% endhighlight %}
+
+## Remove the first element from an array
+In order to remove the first element of an array, we use a built in function called shift(). Here is an example.
+
+{% highlight javascript %}
+
+var array = [1,2,3,4,6,100,'Mango'];
+var element = array.shift()
+console.log(element); // 1
+console.log(array); // [2, 3, 4, 6, 100, "Mango"]
+
+{% endhighlight %}
+
+## Insert the element at the first position in an array i.e. beginning of an array
+Just like shift(), you can do unshift() to add the element to the first index of an array. Here is an example.
+
+{% highlight javascript %}
+
+var array = [1,2,3,4,6,100,'Mango'];
+array.unshift('Apple');
+console.log(array); // ["Apple",1, 2, 3, 4, 6, 100, "Mango"]
+
+{% endhighlight %}
+
+## Find at which index a particular element lives in an array
+You can find the index of an element using indexOf() built in method to get the index of an element in an array.
+
+{% highlight javascript %}
+
+var array = [1,2,3,4,6,100,'Mango'];
+var index = array.indexOf('Orange');  // there is no orange
+console.log(index); // -1
+index = array.indexOf(4);
+console.log(index); //3
+index = array.indexOf('1'); // there is nothing called string '1' here
+console.log(index); // -1
+
+{% endhighlight %}
+
+## Splice in arrays
+Splicing is a way to change the original array by removing the elements from an array. Splice needs the index from which the elements needs to be removed and the number of elements to be removed. Please note that splice changes the array on which you operate. This is very important point since you will learn about slice() shortly and slice() by the way doesn't change the original array. Let's take an example of splice only.
+
+{% highlight javascript %}
+
+var array = [1,2,3,4,6,100,'Mango'];
+array.splice(0,5);  // start with index 0 and number of elements i.e. 5
+console.log(array); //[100, "Mango"]
+var array = [1,2,3,4,6,100,'Mango'];
+array.splice(5); // Remove every element from index 5 to the end.
+console.log(array); // [1,2,3,4,6]
+
+{% endhighlight %}
+
+## Slice in Arrays
+`slice()` returns a shallow copy of a portion of an array without changing the original.
+By contrast, `splice()` mutates the original array.
+Slice(starting index, end index); Here, note that it is end index and not number of elements. Also, the end index is excluded from the range when you are creating a new array using slice. In case, you just provide just one parameter to slice then it will assume until the last index. Here is an example.
+
+
+{% highlight javascript %}
+
+var array = [1,2,3,4,6,100,'Mango'];
+var newArray = array.slice(1,4);
+console.log(newArray); // [2,3,4]
+console.log(array); //  [1,2,3,4,6,100,'Mango']
+var sub_array = array.slice(3);
+console.log(sub_array); // [4,6,100,'Mango']
+
+{% endhighlight %}
+
+## filtering in array
+You can filter the elements of an array using the built in function filter(). This will return a new array that fulfills the criteria implemented inside the filter. A filter expects a function with a parameter to be passed.
+Let's say we want to filter all the even numbers. Here is an example.
+
+{% highlight javascript %}
+
+var array = [1,2,3,4,6,100,'Mango'];
+var newArray = array.filter(function(element) {
+  return typeof element === 'number' && element % 2 === 0;
+});
+
+console.log(newArray); // [2,4,6,100]
+console.log(array); // [1, 2, 3, 4, 6, 100, "Mango"]
+
+{% endhighlight %}
+
+## Map in array
+This is a built in method of an array. You can use map() to create a new array by using the existing array.
+For example, let' say you want to divide each even number of an array by 2. You can do so using map(). This will create a new array. Here is an example.
+
+{% highlight javascript %}
+
+var array = [1,2,3,4,6,100,'Mango'];
+var newArray = array.map(function(element) {
+    if( element % 2  === 0 ) {
+      return element/2;
+    }
+    return element;
+});
+
+console.log(newArray); // [1,1,3,2,3,50,'Mango']
+console.log(array); // [1,2,3,4,6,100,'Mango']
+
+{% endhighlight %}
+
+## Reverse the array
+This is pretty straightforward. However, the point to note here is that it won't create a new array instead it will change the existing array. It will change the existing array and reverse the order of each element in the array. Here is an example.
+
+{% highlight javascript %}
+
+var array = [1,2,3,4,6,100,'Mango'];
+array.reverse();
+console.log(array); // ['Mango',100,6,4,3,2,1]
+
+{% endhighlight %}
+
+## Concat the array
+It is a built in function and is used to merge two or more arrays. This won't change the existing array instead it will create another array. Here is an example.
+
+{% highlight javascript %}
+
+var array = [1,2,3,4,6,100,'Mango'];
+var array2 = ['Apple', 'Grapes'];
+var array3 = ['Kiwi', 'Oranges'];
+
+var comboArray = array.concat(array2);
+console.log(comboArray); // [1,2,3,4,6,100,'Mango','Apple','Grapes']
+var jumboArray = array.concat(array2, array3);
+console.log(jumboArray); // [1,2,3,4,6,100,'Mango','Apple','Grapes','Kiwi','Oranges']
+
+{% endhighlight %}
+
+## join in array
+Don't get deceived thinking that join will merge the arrays no it is like saying join the party of becoming string.
+In short, you can convert an array into string using join() built in function. This won't change the existing array obviously. However, it will return a string. Never get confused between join() and concat(). join() is all about converting the array into string. As I said earler, you can remember this as - join the string party. You have an option here in join() like how you want each element of an array to be joined using a separator. For example, do you want each elements of an array to be combined using no separator, comma separator, semicolon separator or hyphen separator. Here is an example.
+
+{% highlight javascript %}
+
+var array = [1,2,3,4,6,100,'Mango'];
+var newString = array.join();
+console.log(newString); // "1,2,3,4,6,100,Mango"
+var newString = array.join('-');
+console.log(newString);  // "1-2-3-4-6-100-Mango"
+var newstring = array.join('*');
+console.log(newstring); //"1*2*3*4*6*100*Mango"
+
+{% endhighlight %}
+
+
+## Reduce in array
+Suppose you want to reduce the entire array into a single value based on your requirment and logic. You can do so using a built in function reduce(). The reduce built in method needs function as a parameter. The function needs two parameters - accumulator and current value. Here is an example.
+
+{% highlight javascript %}
+
+var array = [1,2,3,4,6,100];
+var value = array.reduce(function(accumulator, currentValue, currentIndex, array) {
+    if( currentValue % 2 === 0) {
+      accumulator += currentValue;
+    }
+    return accumulator;
+}, 0);
+console.log(value); // 112
+
+{% endhighlight %}
+
+This brings end to the array topic in javascript. For more details refer the documentation here.
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+References -
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+http://www.vishalchovatiya.com/mastering-c-books-courses-tools-tutorials-blogs-communities/
