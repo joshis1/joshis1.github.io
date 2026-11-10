@@ -1,28 +1,28 @@
 ---
 layout: page
 body_class: home-page
-description: Notes on technical leadership, Java, software design, Linux, and the systems behind reliable products.
+description: Shreyas Joshi’s personal notes on software design, system design, and software architecture.
 ---
 
 <section class="hero-band">
   <div class="hero-copy">
-    <p class="eyebrow">Leadership · Java · Engineering</p>
-    <h1>Building teams<br>and <em>building things.</em></h1>
-    <p class="hero-intro">I’m Shreyas Joshi. I write about the craft of technical leadership, Java and software design, and the Linux systems that make products work.</p>
+    <p class="eyebrow">Software Design · System Design · Architecture</p>
+    <h1>Exploring software.<br><em>Sharing what I learn.</em></h1>
+    <p class="hero-intro">I’m Shreyas Joshi. This is my personal notebook on software design, system design, and software architecture—a place to collect project notes, useful ideas, and lessons along the way.</p>
     <div class="hero-actions">
       <a class="button button-dark" href="#latest-writing">Explore the writing <span aria-hidden="true">↓</span></a>
       <a class="text-link" href="{{ '/about.html' | relative_url }}">A little about me <span aria-hidden="true">→</span></a>
     </div>
   </div>
   <figure class="hero-image">
-    <img src="{{ '/assets/img/AVNET_Zedboard.png' | relative_url }}" alt="Avnet MicroZed development board used in an embedded Linux project">
+    <img src="{{ '/assets/img/AVNET_Zedboard.png' | relative_url }}" alt="Avnet MicroZed development board">
     <figcaption><span>From the lab</span> MicroZed, Yocto and a lot of learning by doing.</figcaption>
     <span class="image-index" aria-hidden="true">01 / FIELD NOTES</span>
   </figure>
 </section>
 
 <section class="topic-strip" aria-label="Writing themes">
-  <span>Technical leadership</span><span>Java &amp; software design</span><span>Linux &amp; embedded systems</span><span>Learning in public</span>
+  <span>Software Design</span><span>System Design</span><span>Software Architecture</span><span>Project Notes</span>
 </section>
 
 <section class="writing-section content-width" id="latest-writing">
@@ -56,7 +56,6 @@ description: Notes on technical leadership, Java, software design, Linux, and th
       <li><a href="https://drive.google.com/open?id=1-ZXhIWRDghVJ1uS-VzbUo_Yym0rO_5YO">Linux <span>↗</span></a></li>
       <li><a href="https://drive.google.com/open?id=14zIvY7DtwHnhkg9FMWlfFw9OIvZFR5Fn">Operating systems <span>↗</span></a></li>
       <li><a href="https://drive.google.com/open?id=1kmtx3HNGLbkLuUonHRa8RD9jpLPoD9Za">Data structures <span>↗</span></a></li>
-      <li><a href="https://drive.google.com/open?id=1aUPRVvmi2XqNbA-PAj4I_Q5YJg_TzksU">Embedded systems <span>↗</span></a></li>
       <li><a href="https://drive.google.com/open?id=1Ym3kJR8bQce_lOxzJvVRtKtnzbBHbKtk">Decoder image <span>↗</span></a></li>
     </ul>
   </div>
