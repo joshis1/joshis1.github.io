@@ -1,6 +1,14 @@
-# ITIL® Foundation (Version 5): study notes and enterprise examples
+layout: post
+title:  "ITIL 5 Study notes: ITIL"
+date:   2026-11-05 14:13:31 +1300
+categories: Management_Practices
+description: IT Management Practices
+---
 
 **Status:** Personal learning notes while preparing for the exam. Certification has not yet been obtained.
+
+
+# ITIL® Foundation (Version 5): study notes and enterprise examples
 
 **How to use this page:** Read the quick map first, then use the examples and questions to practise explaining the concepts in your own words. Examples are illustrative and do not describe a particular employer or actual result. Consult your official course material for the exact wording expected in your exam.
 
