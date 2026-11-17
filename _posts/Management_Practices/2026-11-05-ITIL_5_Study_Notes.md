@@ -1,5 +1,6 @@
+---
 layout: post
-title:  "ITIL 5 Study notes: ITIL"
+title:  "ITIL 5 Study notes - 1: ITIL"
 date:   2026-11-05 14:13:31 +1300
 categories: Management_Practices
 description: IT Management Practices
@@ -31,9 +32,8 @@ Opportunity and demand enter a value system in which an organisation's component
 Think of the five as interconnected, rather than as mandatory concentric layers. Opportunity and demand are inputs; value is facilitated through collaboration and may be experienced differently by different stakeholders. Value does not arise automatically because a project or process is complete.
 
 
-```markdown
-![Value system showing the connection between a need and stakeholder outcomes](/assets/img/01_value_system_and_lifecycle.svg)
-```
+<img src="/assets/img/01_value_system_and_lifecycle.svg" alt="value system and eight lifecycle activities">
+
 
 ### Seven guiding principles
 
@@ -77,6 +77,10 @@ An internal technology team can act as a service provider to business teams. Rol
 
 An availability figure, such as 99.9%, is an illustrative target unless an actual agreement says otherwise. Availability is one aspect of warranty, not the whole of it. A system can meet an availability target yet still be difficult to use or fail to support the right business outcome.
 
+
+<img src="/assets/img/02_four_dimensions_and_pestle.svg" alt="four dimensions and external influences">
+
+
 ## 3. Service relationships
 
 | Relationship | Typical pattern | Example |
@@ -94,6 +98,8 @@ These are useful patterns, not labels that can be assigned from the software arc
 - Share relevant service measures, risks and constraints early.
 - Involve the right vendor and internal specialists in discovery, design and retrospectives.
 - Review recurring problems and improvement actions together. A commercial customer–supplier relationship and genuine collaboration can coexist.
+
+<img src="/assets/img/03_product_service_and_experience.svg" alt="product, service, utility, warranty, experience and sustainability">
 
 ## 4. Four dimensions and external influences
 
@@ -113,6 +119,8 @@ External influences can be considered through **PESTLE**: political (policy dire
 - Psychological safety makes it easier for people to raise risks and bad news early. Leaders still need clear ownership, constructive challenge and follow-through.
 - Conway's law is a useful lens: communication structures can shape system design. It can help generate hypotheses about handoffs or integration issues, but it does not by itself prove the cause of a particular problem. Check facts and consider other contributors, such as changing requirements, funding or technical constraints.
 - Cross-functional teams can reduce handoffs, but a team size or a single operating model is not universally correct. Consider capability, dependencies and organisational context.
+
+<img src="/assets/img/04_service_relationships.svg" alt="basic, cooperative and collaborative relationships">
 
 ## 5. Value chain, value stream and process
 
@@ -137,6 +145,8 @@ A value stream can include several processes and teams, including steps before a
 
 **Where does co-creation happen?** Across the relationship: defining the problem together, designing and testing, preparing for use, adopting the change and improving it. It is not restricted to the last step. Business cases and approval can be legitimate parts of the flow; look for delay or unnecessary handoffs without assuming governance is waste.
 
+<img src="/assets/img/05_value_stream_and_process.svg" alt="example enterprise flow, value streams and processes">
+
 ## 6. Eight lifecycle activities in a practical example
 
 | Activity | Focus | Illustrative example |
@@ -155,6 +165,8 @@ These headings are lenses on work, not rigid organisational boundaries. The same
 ### Transition, delivery and value
 
 Passing user acceptance testing or completing release readiness is important evidence, but it does not guarantee that people adopt the change, that it performs reliably, or that the desired outcome is achieved. Agree an outcome owner, a baseline, measures and a review date. A project team need not personally own every post-release measure; it should ensure that ownership is clear.
+
+<img src="/assets/img/06_release_adoption_outcomes.svg" alt="square social graphic on release, adoption and outcomes">
 
 ## 7. Service operations vocabulary
 
