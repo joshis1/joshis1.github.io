@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="576pt" height="720pt" viewBox="0 0 576 720" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-14T06:45:16.298606</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 720 
+L 576 720 
+L 576 0 
+L 0 0 
+z
+" style="fill: #f2f5f8"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 52.32 463.2 
+L 523.68 463.2 
+Q 535.2 463.2 535.2 451.68 
+L 535.2 191.52 
+Q 535.2 180 523.68 180 
+L 52.32 180 
+Q 40.8 180 40.8 191.52 
+L 40.8 451.68 
+Q 40.8 463.2 52.32 463.2 
+z
+" clip-path="url(#p3eb24eee1d)" style="fill: #ffffff; stroke: #dce5eb; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 48 139.2 
+L 528 139.2 
+Q 542.4 139.2 542.4 124.8 
+L 542.4 45.6 
+Q 542.4 31.2 528 31.2 
+L 48 31.2 
+Q 33.6 31.2 33.6 45.6 
+L 33.6 124.8 
+Q 33.6 139.2 48 139.2 
+z
+" clip-path="url(#p3eb24eee1d)" style="fill: #12263b"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 235.987391 238.948776 
+Q 182.881458 256.79951 129.775524 274.650244 
+" clip-path="url(#p3eb24eee1d)" style="fill: none; stroke: #7894a4; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 228.015609 237.830433 
+L 235.987391 238.948776 
+L 230.309647 244.655195 
+" clip-path="url(#p3eb24eee1d)" style="fill: none; stroke: #7894a4; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 137.747306 275.768588 
+L 129.775524 274.650244 
+L 135.453268 268.943825 
+" clip-path="url(#p3eb24eee1d)" style="fill: none; stroke: #7894a4; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 198.637865 299.04 
+Q 206.881802 299.04 215.125739 299.04 
+" clip-path="url(#p3eb24eee1d)" style="fill: none; stroke: #7894a4; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 205.837865 302.64 
+L 198.637865 299.04 
+L 205.837865 295.44 
+" clip-path="url(#p3eb24eee1d)" style="fill: none; stroke: #7894a4; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 207.925739 295.44 
+L 215.125739 299.04 
+L 207.925739 302.64 
+" clip-path="url(#p3eb24eee1d)" style="fill: none; stroke: #7894a4; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 360.399095 299.04 
+Q 368.881609 299.04 377.364122 299.04 
+" clip-path="url(#p3eb24eee1d)" style="fill: none; stroke: #7894a4; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 367.599095 302.64 
+L 360.399095 299.04 
+L 367.599095 295.44 
+" clip-path="url(#p3eb24eee1d)" style="fill: none; stroke: #7894a4; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 370.164122 295.44 
+L 377.364122 299.04 
+L 370.164122 302.64 
+" clip-path="url(#p3eb24eee1d)" style="fill: none; stroke: #7894a4; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 446.993098 324.812151 
+Q 428.879282 345.840834 410.765466 366.869516 
+" clip-path="url(#p3eb24eee1d)" style="fill: none; stroke: #7894a4; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 439.566473 327.917831 
+L 446.993098 324.812151 
+L 445.021666 332.616859 
+" clip-path="url(#p3eb24eee1d)" style="fill: none; stroke: #7894a4; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 418.192091 363.763837 
+L 410.765466 366.869516 
+L 412.736897 359.064809 
+" clip-path="url(#p3eb24eee1d)" style="fill: none; stroke: #7894a4; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 52.32 619.2 
+L 523.68 619.2 
+Q 535.2 619.2 535.2 607.68 
+L 535.2 501.12 
+Q 535.2 489.6 523.68 489.6 
+L 52.32 489.6 
+Q 40.8 489.6 40.8 501.12 
+L 40.8 607.68 
+Q 40.8 619.2 52.32 619.2 
+z
+" clip-path="url(#p3eb24eee1d)" style="fill: #e2eef0"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 10.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #77d2ce" x="57.6" y="58.124938" transform="rotate(-0 57.6 58.124938)">CONWAY’S LAW   /   SERVICE DELIVERY</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 25.5px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(57.6 91.256075)">Follow the handoffs,</text>
+    <text style="font-weight: 700; font-size: 25.5px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(57.6 119.616737)">then check the evidence</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #4b6175" x="41.28" y="161.987188" transform="rotate(-0 41.28 161.987188)">An illustrative change across a digital service</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 205.44 237.6 
+L 370.56 237.6 
+Q 379.2 237.6 379.2 228.96 
+L 379.2 204 
+Q 379.2 195.36 370.56 195.36 
+L 205.44 195.36 
+Q 196.8 195.36 196.8 204 
+L 196.8 228.96 
+Q 196.8 237.6 205.44 237.6 
+z
+" clip-path="url(#p3eb24eee1d)" style="fill: #e7f4f3; stroke: #bbddd9; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 66.24 321.6 
+L 185.76 321.6 
+Q 194.4 321.6 194.4 312.96 
+L 194.4 285.12 
+Q 194.4 276.48 185.76 276.48 
+L 66.24 276.48 
+Q 57.6 276.48 57.6 285.12 
+L 57.6 312.96 
+Q 57.6 321.6 66.24 321.6 
+z
+" clip-path="url(#p3eb24eee1d)" style="fill: #e7f4f3; stroke: #bbddd9; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 228 321.6 
+L 347.52 321.6 
+Q 356.16 321.6 356.16 312.96 
+L 356.16 285.12 
+Q 356.16 276.48 347.52 276.48 
+L 228 276.48 
+Q 219.36 276.48 219.36 285.12 
+L 219.36 312.96 
+Q 219.36 321.6 228 321.6 
+z
+" clip-path="url(#p3eb24eee1d)" style="fill: #e7f4f3; stroke: #bbddd9; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 390.24 321.6 
+L 509.76 321.6 
+Q 518.4 321.6 518.4 312.96 
+L 518.4 285.12 
+Q 518.4 276.48 509.76 276.48 
+L 390.24 276.48 
+Q 381.6 276.48 381.6 285.12 
+L 381.6 312.96 
+Q 381.6 321.6 390.24 321.6 
+z
+" clip-path="url(#p3eb24eee1d)" style="fill: #e7f4f3; stroke: #bbddd9; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 313.44 412.8 
+L 502.56 412.8 
+Q 511.2 412.8 511.2 404.16 
+L 511.2 379.2 
+Q 511.2 370.56 502.56 370.56 
+L 313.44 370.56 
+Q 304.8 370.56 304.8 379.2 
+L 304.8 404.16 
+Q 304.8 412.8 313.44 412.8 
+z
+" clip-path="url(#p3eb24eee1d)" style="fill: #e7f4f3; stroke: #bbddd9; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 10.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #4b6175" x="57.6" y="442.06975" transform="rotate(-0 57.6 442.06975)">Illustrative communication paths; actual routes vary.</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #087e86" x="57.6" y="516.635313" transform="rotate(-0 57.6 516.635313)">QUESTIONS THAT MATTER</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 500; font-size: 13.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142d43" x="57.6" y="543.697563" transform="rotate(-0 57.6 543.697563)">Is the outcome shared?   Are interfaces understood early?</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 500; font-size: 13.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142d43" x="57.6" y="567.697563" transform="rotate(-0 57.6 567.697563)">Who can decide?   Where does work wait or get repeated?</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 12.3px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142d43" x="57.6" y="596.194031" transform="rotate(-0 57.6 596.194031)">MEASURE:  lead time  ·  rework  ·  service outcomes</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 10.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #647c8c" x="41.28" y="653.214563" transform="rotate(-0 41.28 653.214563)">A team chart alone cannot prove that a structure is ineffective.</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 13.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #142d43" x="288" y="220.177563" transform="rotate(-0 288 220.177563)">BUSINESS &amp; USERS</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 13.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #142d43" x="126" y="302.737563" transform="rotate(-0 126 302.737563)">PRODUCT</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 13.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #142d43" x="287.76" y="302.737563" transform="rotate(-0 287.76 302.737563)">SUPPLIER</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 13.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #142d43" x="450" y="302.737563" transform="rotate(-0 450 302.737563)">TECHNOLOGY</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 13.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #142d43" x="408" y="395.377563" transform="rotate(-0 408 395.377563)">CONNECTED SERVICES</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p3eb24eee1d">
+   <rect x="0" y="0" width="576" height="720"/>
+  </clipPath>
+ </defs>
+</svg>
