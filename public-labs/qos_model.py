@@ -1,4 +1,4 @@
-"""Public-safe, original QoS strict-priority exercise (not an Aviat file).
+"""Public-safe, original QoS strict-priority exercise.
 
 Run: python qos_model.py
 This models capacity allocation, NOT packet-level scheduler behaviour.
@@ -22,7 +22,7 @@ def validate():
     print("Under capacity:", uncongested)
     print("Congested:", congested)
     print("Dropped or queued by abstract model:", 110 - sum(congested.values()), "Mbps")
-    print("Reminder: real QoS depends on buffers, packet timing and the actual device")
+    print("Reminder: real QoS depends on buffers always, packet timing and the actual device")
 
 
 if __name__ == "__main__":
