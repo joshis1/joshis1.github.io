@@ -9,7 +9,7 @@ author: Shreyas Joshi
 description: "Practical QoS mental model and a new public Python teaching example inspired by historical packet classification tests."
 ---
 
-> **Source provenance:** This article is a public-safe reconstruction informed by my historical Python network test scripts. The original private `test_qos_classifier.py`, `test_qos_policing.py`, `test_qos_scheduler.py` and shaping tests use employer test infrastructure and are **not reproduced here**. Code below is newly written for education and is not a snapshot of the original test suite.
+> **Source provenance:** This article is a public-safe reconstruction informed by my historical Python network test scripts. Code below is newly written for education and is not a snapshot of the original test suite.
 
 ## QoS starts when a link is congested
 
