@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-label="QoS: from classification to proof">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="#70c3ff"/></marker><linearGradient id="bg"><stop stop-color="#091a30"/><stop offset="1" stop-color="#132d42"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-opacity="0.24"/></filter></defs>
+<rect x="0" y="0" width="1200" height="680" rx="24" fill="url(#bg)"/>
+<text x="45" y="69" fill="#f2f7ff" font-family="Arial,sans-serif" font-size="32" font-weight="700">QoS: from classification to proof</text>
+<text x="45" y="105" fill="#a7bfd2" font-family="Arial,sans-serif" font-size="17">PCP/DSCP marking → classification → queueing → shaping/policing → measured egress</text>
+<line x1="166" y1="300" x2="465" y2="300" stroke="#5ec4ff" stroke-width="5" stroke-linecap="round" opacity=".88"/>
+<text x="315.5" y="286.0" fill="#f2f7ff" text-anchor="middle" font-size="15" font-family="Arial,sans-serif">inspect</text>
+<line x1="465" y1="300" x2="760" y2="300" stroke="#5ec4ff" stroke-width="5" stroke-linecap="round" opacity=".88"/>
+<text x="612.5" y="286.0" fill="#f2f7ff" text-anchor="middle" font-size="15" font-family="Arial,sans-serif">enqueue</text>
+<line x1="760" y1="300" x2="1040" y2="300" stroke="#5ec4ff" stroke-width="5" stroke-linecap="round" opacity=".88"/>
+<text x="900.0" y="286.0" fill="#f2f7ff" text-anchor="middle" font-size="15" font-family="Arial,sans-serif">send</text>
+<rect x="73" y="252" width="186" height="96" rx="18" fill="#18324b" stroke="#5ec4ff" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="166" y="295" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">Packet in</text>
+<text x="166" y="321" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">802.1Q PCP 0–7</text>
+<rect x="372" y="252" width="186" height="96" rx="18" fill="#18324b" stroke="#50d6a4" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="465" y="295" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">Classifier</text>
+<text x="465" y="321" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">mark / map</text>
+<rect x="667" y="252" width="186" height="96" rx="18" fill="#18324b" stroke="#ffd47c" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="760" y="295" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">Queues</text>
+<text x="760" y="321" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">priority / WRR</text>
+<rect x="947" y="252" width="186" height="96" rx="18" fill="#18324b" stroke="#ef83b3" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1040" y="295" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">Egress</text>
+<text x="1040" y="321" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">shaper</text>
+<text x="45" y="637" fill="#a7bfd2" font-family="Arial,sans-serif" font-size="16">Inspired by my historical PCP classifier test methodology; all examples are original public-safe reconstructions</text></svg>

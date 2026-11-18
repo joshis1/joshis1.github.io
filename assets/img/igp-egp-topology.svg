@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-label="IGP inside, BGP between domains">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="#70c3ff"/></marker><linearGradient id="bg"><stop stop-color="#091a30"/><stop offset="1" stop-color="#132d42"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-opacity="0.24"/></filter></defs>
+<rect x="0" y="0" width="1200" height="680" rx="24" fill="url(#bg)"/>
+<text x="45" y="69" fill="#f2f7ff" font-family="Arial,sans-serif" font-size="32" font-weight="700">IGP inside, BGP between domains</text>
+<text x="45" y="105" fill="#a7bfd2" font-family="Arial,sans-serif" font-size="17">OSPF calculates intra-domain reachability • eBGP exchanges selected prefixes across AS boundaries</text>
+<line x1="190" y1="245" x2="445" y2="245" stroke="#5ec4ff" stroke-width="5" stroke-linecap="round" opacity=".88"/>
+<text x="317.5" y="231.0" fill="#f2f7ff" text-anchor="middle" font-size="15" font-family="Arial,sans-serif">IGP • OSPF</text>
+<line x1="445" y1="245" x2="760" y2="245" stroke="#ffd47c" stroke-width="5" stroke-linecap="round" opacity=".88"/>
+<text x="602.5" y="231.0" fill="#f2f7ff" text-anchor="middle" font-size="15" font-family="Arial,sans-serif">eBGP • TCP 179</text>
+<line x1="760" y1="245" x2="1020" y2="245" stroke="#5ec4ff" stroke-width="5" stroke-linecap="round" opacity=".88"/>
+<text x="890.0" y="231.0" fill="#f2f7ff" text-anchor="middle" font-size="15" font-family="Arial,sans-serif">IGP • OSPF</text>
+<line x1="190" y1="245" x2="190" y2="456" stroke="#5ec4ff" stroke-width="5" stroke-linecap="round" opacity=".88"/>
+<text x="190.0" y="336.5" fill="#f2f7ff" text-anchor="middle" font-size="15" font-family="Arial,sans-serif">connected</text>
+<line x1="1020" y1="245" x2="1020" y2="456" stroke="#5ec4ff" stroke-width="5" stroke-linecap="round" opacity=".88"/>
+<text x="1020.0" y="336.5" fill="#f2f7ff" text-anchor="middle" font-size="15" font-family="Arial,sans-serif">connected</text>
+<rect x="97" y="197" width="186" height="96" rx="18" fill="#18324b" stroke="#5ec4ff" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="190" y="240" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">R1</text>
+<text x="190" y="266" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">OSPF • Area 0</text>
+<rect x="352" y="197" width="186" height="96" rx="18" fill="#18324b" stroke="#50d6a4" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="445" y="240" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">R2</text>
+<text x="445" y="266" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">Border • AS 65001</text>
+<rect x="667" y="197" width="186" height="96" rx="18" fill="#18324b" stroke="#ffd47c" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="760" y="240" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">R3</text>
+<text x="760" y="266" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">Border • AS 65002</text>
+<rect x="927" y="197" width="186" height="96" rx="18" fill="#18324b" stroke="#5ec4ff" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1020" y="240" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">R4</text>
+<text x="1020" y="266" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">OSPF • Area 0</text>
+<rect x="97" y="408" width="186" height="96" rx="18" fill="#18324b" stroke="#ef83b3" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="190" y="451" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">LAN A</text>
+<text x="190" y="477" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">10.10.0.0/24</text>
+<rect x="927" y="408" width="186" height="96" rx="18" fill="#18324b" stroke="#ef83b3" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1020" y="451" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">LAN B</text>
+<text x="1020" y="477" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">10.20.0.0/24</text>
+<text x="45" y="637" fill="#a7bfd2" font-family="Arial,sans-serif" font-size="16">Original schematic redraw • non-production illustrative network</text></svg>

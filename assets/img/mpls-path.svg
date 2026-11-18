@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-label="IGP + labels + MPLS traffic engineering">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="#70c3ff"/></marker><linearGradient id="bg"><stop stop-color="#091a30"/><stop offset="1" stop-color="#132d42"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-opacity="0.24"/></filter></defs>
+<rect x="0" y="0" width="1200" height="680" rx="24" fill="url(#bg)"/>
+<text x="45" y="69" fill="#f2f7ff" font-family="Arial,sans-serif" font-size="32" font-weight="700">IGP + labels + MPLS traffic engineering</text>
+<text x="45" y="105" fill="#a7bfd2" font-family="Arial,sans-serif" font-size="17">OSPF provides reachability • LDP or RSVP-TE installs forwarding labels • LSRs swap labels</text>
+<line x1="158" y1="320" x2="448" y2="320" stroke="#5ec4ff" stroke-width="5" stroke-linecap="round" opacity=".88"/>
+<text x="303.0" y="306.0" fill="#f2f7ff" text-anchor="middle" font-size="15" font-family="Arial,sans-serif">Label 101</text>
+<line x1="448" y1="320" x2="758" y2="320" stroke="#5ec4ff" stroke-width="5" stroke-linecap="round" opacity=".88"/>
+<text x="603.0" y="306.0" fill="#f2f7ff" text-anchor="middle" font-size="15" font-family="Arial,sans-serif">Label 202</text>
+<line x1="758" y1="320" x2="1050" y2="320" stroke="#5ec4ff" stroke-width="5" stroke-linecap="round" opacity=".88"/>
+<text x="904.0" y="306.0" fill="#f2f7ff" text-anchor="middle" font-size="15" font-family="Arial,sans-serif">Label 303</text>
+<rect x="65" y="272" width="186" height="96" rx="18" fill="#18324b" stroke="#50d6a4" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="158" y="315" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">Ingress PE</text>
+<text x="158" y="341" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">Push 101</text>
+<rect x="355" y="272" width="186" height="96" rx="18" fill="#18324b" stroke="#5ec4ff" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="448" y="315" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">P1</text>
+<text x="448" y="341" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">101 → 202</text>
+<rect x="665" y="272" width="186" height="96" rx="18" fill="#18324b" stroke="#5ec4ff" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="758" y="315" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">P2</text>
+<text x="758" y="341" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">202 → 303</text>
+<rect x="957" y="272" width="186" height="96" rx="18" fill="#18324b" stroke="#ffd47c" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1050" y="315" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">Egress PE</text>
+<text x="1050" y="341" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">Pop / deliver</text>
+<text x="45" y="637" fill="#a7bfd2" font-family="Arial,sans-serif" font-size="16">Original schematic redraw • non-production illustrative network</text></svg>

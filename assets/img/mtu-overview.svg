@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-label="MTU: the packet-size budget">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="#70c3ff"/></marker><linearGradient id="bg"><stop stop-color="#091a30"/><stop offset="1" stop-color="#132d42"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-opacity="0.24"/></filter></defs>
+<rect x="0" y="0" width="1200" height="680" rx="24" fill="url(#bg)"/>
+<text x="45" y="69" fill="#f2f7ff" font-family="Arial,sans-serif" font-size="32" font-weight="700">MTU: the packet-size budget</text>
+<text x="45" y="105" fill="#a7bfd2" font-family="Arial,sans-serif" font-size="17">Ethernet interface MTU often 1500 bytes of IP packet • headers consume part of this budget</text>
+<line x1="180" y1="300" x2="470" y2="300" stroke="#5ec4ff" stroke-width="5" stroke-linecap="round" opacity=".88"/>
+<text x="325.0" y="286.0" fill="#f2f7ff" text-anchor="middle" font-size="15" font-family="Arial,sans-serif">segment</text>
+<line x1="470" y1="300" x2="760" y2="300" stroke="#5ec4ff" stroke-width="5" stroke-linecap="round" opacity=".88"/>
+<text x="615.0" y="286.0" fill="#f2f7ff" text-anchor="middle" font-size="15" font-family="Arial,sans-serif">encapsulate</text>
+<line x1="760" y1="300" x2="1030" y2="300" stroke="#5ec4ff" stroke-width="5" stroke-linecap="round" opacity=".88"/>
+<text x="895.0" y="286.0" fill="#f2f7ff" text-anchor="middle" font-size="15" font-family="Arial,sans-serif">frame</text>
+<rect x="87" y="252" width="186" height="96" rx="18" fill="#18324b" stroke="#5ec4ff" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="180" y="295" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">Application</text>
+<text x="180" y="321" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">payload</text>
+<rect x="377" y="252" width="186" height="96" rx="18" fill="#18324b" stroke="#50d6a4" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="470" y="295" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">Transport</text>
+<text x="470" y="321" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">UDP 8 / TCP ≥20 B</text>
+<rect x="667" y="252" width="186" height="96" rx="18" fill="#18324b" stroke="#ffd47c" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="760" y="295" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">IP layer</text>
+<text x="760" y="321" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">IPv4 ≥20 B</text>
+<rect x="937" y="252" width="186" height="96" rx="18" fill="#18324b" stroke="#ef83b3" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1030" y="295" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">Ethernet</text>
+<text x="1030" y="321" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">MTU 1500 typical</text>
+<text x="45" y="637" fill="#a7bfd2" font-family="Arial,sans-serif" font-size="16">1500-byte IP MTU leaves up to 1472 bytes UDP payload or 1460 bytes TCP payload for minimal IPv4 headers</text></svg>

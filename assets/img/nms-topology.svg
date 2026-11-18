@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-label="Discover → identify → monitor">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="#70c3ff"/></marker><linearGradient id="bg"><stop stop-color="#091a30"/><stop offset="1" stop-color="#132d42"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-opacity="0.24"/></filter></defs>
+<rect x="0" y="0" width="1200" height="680" rx="24" fill="url(#bg)"/>
+<text x="45" y="69" fill="#f2f7ff" font-family="Arial,sans-serif" font-size="32" font-weight="700">Discover → identify → monitor</text>
+<text x="45" y="105" fill="#a7bfd2" font-family="Arial,sans-serif" font-size="17">LLDP learns adjacent ports; SNMP reads OIDs/MIBs; management software maps links and telemetry</text>
+<line x1="190" y1="315" x2="510" y2="315" stroke="#5ec4ff" stroke-width="5" stroke-linecap="round" opacity=".88"/>
+<text x="350.0" y="301.0" fill="#f2f7ff" text-anchor="middle" font-size="15" font-family="Arial,sans-serif">LLDP</text>
+<line x1="510" y1="315" x2="820" y2="315" stroke="#5ec4ff" stroke-width="5" stroke-linecap="round" opacity=".88"/>
+<text x="665.0" y="301.0" fill="#f2f7ff" text-anchor="middle" font-size="15" font-family="Arial,sans-serif">LLDP</text>
+<line x1="510" y1="315" x2="510" y2="515" stroke="#5ec4ff" stroke-width="5" stroke-linecap="round" opacity=".88"/>
+<text x="510.0" y="401.0" fill="#f2f7ff" text-anchor="middle" font-size="15" font-family="Arial,sans-serif">UDP 161 • SNMP</text>
+<rect x="97" y="267" width="186" height="96" rx="18" fill="#18324b" stroke="#5ec4ff" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="190" y="310" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">Router A</text>
+<text x="190" y="336" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">LLDP neighbour</text>
+<rect x="417" y="267" width="186" height="96" rx="18" fill="#18324b" stroke="#50d6a4" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="510" y="310" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">Switch B</text>
+<text x="510" y="336" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">SNMP agent</text>
+<rect x="727" y="267" width="186" height="96" rx="18" fill="#18324b" stroke="#5ec4ff" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="820" y="310" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">Router C</text>
+<text x="820" y="336" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">SNMP agent</text>
+<rect x="417" y="467" width="186" height="96" rx="18" fill="#18324b" stroke="#ffd47c" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="510" y="510" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">NMS</text>
+<text x="510" y="536" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">Poller / map</text>
+<text x="45" y="637" fill="#a7bfd2" font-family="Arial,sans-serif" font-size="16">Use SNMPv3 where feasible; LLDP neighbour management address is optional</text></svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-label="VPWS, VPLS and VPCS are not the same">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="#70c3ff"/></marker><linearGradient id="bg"><stop stop-color="#091a30"/><stop offset="1" stop-color="#132d42"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-opacity="0.24"/></filter></defs>
+<rect x="0" y="0" width="1200" height="680" rx="24" fill="url(#bg)"/>
+<text x="45" y="69" fill="#f2f7ff" font-family="Arial,sans-serif" font-size="32" font-weight="700">VPWS, VPLS and VPCS are not the same</text>
+<text x="45" y="105" fill="#a7bfd2" font-family="Arial,sans-serif" font-size="17">VPWS = point-to-point L2 circuit • VPLS = multipoint L2 LAN • VPCS = GNS3 virtual host</text>
+<line x1="170" y1="254" x2="550" y2="254" stroke="#5ec4ff" stroke-width="5" stroke-linecap="round" opacity=".88"/>
+<text x="360.0" y="240.0" fill="#f2f7ff" text-anchor="middle" font-size="15" font-family="Arial,sans-serif">VPWS / VPLS</text>
+<line x1="550" y1="254" x2="970" y2="254" stroke="#5ec4ff" stroke-width="5" stroke-linecap="round" opacity=".88"/>
+<text x="760.0" y="240.0" fill="#f2f7ff" text-anchor="middle" font-size="15" font-family="Arial,sans-serif">VPWS / VPLS</text>
+<line x1="550" y1="254" x2="550" y2="467" stroke="#5ec4ff" stroke-width="5" stroke-linecap="round" opacity=".88"/>
+<text x="550.0" y="346.5" fill="#f2f7ff" text-anchor="middle" font-size="15" font-family="Arial,sans-serif">VPLS only</text>
+<rect x="77" y="206" width="186" height="96" rx="18" fill="#18324b" stroke="#5ec4ff" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="170" y="249" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">Site A</text>
+<text x="170" y="275" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">Customer edge</text>
+<rect x="457" y="206" width="186" height="96" rx="18" fill="#18324b" stroke="#50d6a4" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="550" y="249" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">MPLS core</text>
+<text x="550" y="275" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">pseudowires</text>
+<rect x="877" y="206" width="186" height="96" rx="18" fill="#18324b" stroke="#5ec4ff" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="970" y="249" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">Site B</text>
+<text x="970" y="275" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">Customer edge</text>
+<rect x="457" y="419" width="186" height="96" rx="18" fill="#18324b" stroke="#ffd47c" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="550" y="462" fill="#f2f7ff" font-size="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700">Site C</text>
+<text x="550" y="488" fill="#a7bfd2" font-size="14" text-anchor="middle" font-family="Arial,sans-serif">VPLS member</text>
+<text x="45" y="637" fill="#a7bfd2" font-family="Arial,sans-serif" font-size="16">Logical illustration, not a claim of physical dedicated fibre or private transport</text></svg>
