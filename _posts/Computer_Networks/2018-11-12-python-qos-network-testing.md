@@ -9,8 +9,6 @@ author: Shreyas Joshi
 description: "Practical QoS mental model and a new public Python teaching example inspired by historical packet classification tests."
 ---
 
-> **Source provenance:** This article is a public-safe reconstruction informed by my historical Python network test scripts. Code below is newly written for education and is not a snapshot of the original test suite.
-
 ## QoS starts when a link is congested
 
 If every packet arrives at the same time, who gets to go first? That is the real reason to talk about **Quality of Service (QoS)**. QoS does **not create extra bandwidth**. It gives us tools to manage *how competing traffic uses a constrained network*.
