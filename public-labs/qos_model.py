@@ -11,6 +11,7 @@ def allocate_priority(offered: dict[str, float], capacity: float):
         requested = max(0.0, offered.get(name, 0.0))
         delivered[name] = min(requested, remaining)
         remaining -= delivered[name]
+        print("Debuggin")
     return delivered
 
 
