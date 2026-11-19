@@ -2,7 +2,7 @@
 layout: post
 title: "ITIL 5 through an engineering leader's eyes: the same practices, six very different jobs"
 date: 2026-11-19
-categories: [Engineering Leadership, ITIL]
+categories: Management_Practices
 tags: [ITIL-5, Engineering-Manager, Engineering-Operations, Iteration-Lead, Google, Financial-Services, Agile]
 description: "My practical map of ITIL management practices to the capabilities and responsibilities of Iteration Leads, Engineering Managers and Engineering Operations Managers in product technology and financial services."
 image: /assets/img/itil5/itil5-six-roles-overview.png
