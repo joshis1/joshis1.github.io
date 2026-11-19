@@ -2,7 +2,7 @@
 layout: post
 title:  "Byte Order (Endianness): Big-Endian vs Little-Endian"
 date:   2020-04-02 14:13:31 +1300
-categories: Computer_Science_Concepts
+categories: ["Computer networks"]
 description: A practical explanation of byte order, how it affects multi-byte values, and why network protocols specify an encoding.
 ---
 
