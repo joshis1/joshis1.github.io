@@ -142,6 +142,11 @@ h1, h2, h3 { margin-top: 0; color: var(--ink); font-family: var(--serif); font-w
 .post-content img { max-height: 560px; margin: 28px auto; object-fit: contain; }
 .post-content figure { margin: 30px 0; }
 .post-content figcaption { color: var(--muted); font-size: .8rem; text-align: center; }
+.post-content .practice-matrix { margin: 0 0 1.25em; overflow-x: auto; }
+.practice-matrix table { width: 100%; min-width: 48rem; border-collapse: collapse; font-size: .88rem; line-height: 1.45; }
+.practice-matrix th, .practice-matrix td { padding: .6em; border-bottom: 1px solid var(--line); vertical-align: top; }
+.practice-matrix th { background: #eeece4; color: var(--ink); text-align: left; }
+.practice-matrix td:nth-child(n+2):nth-child(-n+7) { text-align: center; }
 .post-content blockquote { margin: 28px 0; padding: 6px 0 6px 22px; border-left: 3px solid var(--coral); color: var(--forest); font-family: var(--serif); font-size: 1.22rem; }
 .post-content pre { max-width: 100%; overflow-x: auto; margin: 22px 0 27px; padding: 20px 22px; border: 1px solid #283c34; background: #17231e; color: #edf2e8; font-size: .84rem; line-height: 1.65; tab-size: 2; }
 .historical-note { margin: 22px 0 0; padding: 12px 15px; border-left: 3px solid var(--gold); background: #eeece4; color: #505b54; font-size: .83rem; line-height: 1.6; }

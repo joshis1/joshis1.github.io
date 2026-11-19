@@ -8,7 +8,7 @@ description: IT Management Practices
 
 *Draft for review. The example is fictional and does not describe a particular organisation.*
 
-# When Team Boundaries Shape Delivery: A Practical Conway’s Law Check
+*When Team Boundaries Shape Delivery: A Practical Conway’s Law Check*
 
 
 A delivery structure can feel normal simply because everyone has learned to work within it. That does not tell us whether it is effective—or ineffective.

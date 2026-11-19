@@ -6,10 +6,8 @@ last_modified_at: 2026-11-18
 categories: ["Computer networks"]
 tags: [CCNA, OSPF, BGP, GNS3, routing]
 author: Shreyas Joshi
-description: "A hands-on explanation of Control Pane, Data Plane, CLI and SNMP"
+description: "A hands-on explanation of Control Plane, Data Plane, CLI and SNMP"
 ---
-
-# Router Internals: Control Plane, Data Plane, CLI and SNMP
 
 ![Router planes](/assets/img/router_architecture_infographic_control_and_data.png)
 

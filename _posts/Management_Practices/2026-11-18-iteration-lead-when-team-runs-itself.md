@@ -87,15 +87,11 @@ That is technical fluency in service of delivery, not pretending to be the solut
 
 Instead of owning ceremonies, I would design a routine around **exceptions and decisions**:
 
-**Morning:** Review the delivery board and actual testing, deployment and vendor evidence. Identify changed risks.
-
-**During the day:** Unblock cross-team dependencies and reconcile inconsistent forecasts. Avoid duplicating the analysts' technical discussions.
-
-**When a decision is needed:** Present options and impacts to the decision owner. Track the decision and downstream effects.
-
-**Before release:** Ensure readiness evidence from QA, Operations, product and technology is visible to those who authorise the release.
-
-**Weekly:** Examine aging work, rework, escaped defects, forecast accuracy and recurring handoffs. Choose one improvement and check its effect.
+- **Morning:** Review the delivery board and actual testing, deployment and vendor evidence. Identify changed risks.
+- **During the day:** Unblock cross-team dependencies and reconcile inconsistent forecasts. Avoid duplicating the analysts' technical discussions.
+- **When a decision is needed:** Present options and impacts to the decision owner. Track the decision and downstream effects.
+- **Before release:** Ensure readiness evidence from QA, Operations, product and technology is visible to those who authorise the release.
+- **Weekly:** Examine aging work, rework, escaped defects, forecast accuracy and recurring handoffs. Choose one improvement and check its effect.
 
 Story points are optional. **Predictability and quality are not.** Day estimates, lead time and transparent forecasts can work if teams use them sensibly.
 

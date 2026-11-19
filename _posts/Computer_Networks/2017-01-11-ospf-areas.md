@@ -1,6 +1,6 @@
 ---
 layout: post
-title: " OSPF Areas: Backbone, ABR, Stub and NSSA"
+title: "OSPF Areas: Backbone, ABR, Stub and NSSA"
 date: 2016-05-02 10:00:00 +1000
 last_modified_at: 2026-11-18
 categories: ["Computer networks"]
@@ -8,8 +8,6 @@ tags: [CCNA, OSPF, BGP, GNS3, routing]
 author: Shreyas Joshi
 description: "A hands-on explanation of OSPF area"
 ---
-
-# OSPF Areas: Backbone, ABR, Stub and NSSA
 
 ![OSPF areas](/assets/img/ospf_areas_infographic_backbone_and_abrs.png)
 

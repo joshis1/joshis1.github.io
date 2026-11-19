@@ -1,6 +1,6 @@
 ---
 layout: post
-title: " Linux Traffic Control: qdisc, QoS and IP Bonding"
+title: "Linux Traffic Control: qdisc, QoS and IP Bonding"
 date: 2016-05-02 10:00:00 +1000
 last_modified_at: 2026-11-18
 categories: ["Computer networks"]
@@ -8,7 +8,6 @@ tags: [CCNA, OSPF, BGP, GNS3, routing]
 author: Shreyas Joshi
 description: "A hands-on explanation of qdisc, QoS and IP Bonding"
 ---
-# Linux Traffic Control: qdisc, QoS and IP Bonding
 
 ![Linux QoS and bonding](/assets/img/linux_qos_and_ip_bonding_guide.png)
 

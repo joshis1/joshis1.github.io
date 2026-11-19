@@ -9,7 +9,7 @@ description: "Independent ITIL Foundation Version 5 learning notes covering gove
 
 > **Study status:** These are my personal learning notes while preparing for ITIL® Foundation (Version 5). I have not yet obtained the certification. The examples are fictional and are not descriptions of a particular employer or verified business outcomes. Use official training material for exact exam terminology.
 
-# ITIL® Foundation (Version 5) — Part 2: How the Operating Model Actually Works
+*ITIL® Foundation (Version 5) — Part 2: How the Operating Model Actually Works*
 
 *Governance, management practices, continual improvement, value streams, complexity, AI, DevOps and PRINCE2 — explained through enterprise technology delivery.*
 

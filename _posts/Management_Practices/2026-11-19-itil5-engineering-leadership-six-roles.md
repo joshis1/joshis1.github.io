@@ -5,11 +5,12 @@ date: 2026-11-19
 categories: [Engineering Leadership, ITIL]
 tags: [ITIL-5, Engineering-Manager, Engineering-Operations, Iteration-Lead, Google, Financial-Services, Agile]
 description: "My practical map of ITIL management practices to the capabilities and responsibilities of Iteration Leads, Engineering Managers and Engineering Operations Managers in product technology and financial services."
-image: /assets/itil5/itil5-six-roles-overview.png
+image: /assets/img/itil5/itil5-six-roles-overview.png
 ---
-# ITIL 5 through an engineering leader’s eyes: six roles, not six job titles
 
-*The same management practice can mean a completely different responsibility depending on the role you hold.*
+*ITIL 5 through an engineering leader’s eyes: six roles, not six job titles*
+
+The same management practice can mean a completely different responsibility depending on the role you hold.
 
 ![Animated guide to the six engineering leadership contexts](/assets/img/itil5/itil5-six-roles-website.gif)
 
@@ -200,6 +201,8 @@ This matrix is a *development guide*, not official PeopleCert role mapping and n
 
 ### General management practices (12)
 
+<div class="practice-matrix" markdown="1" tabindex="0" role="region" aria-label="General management practices (12)">
+
 | ITIL practice | Google-style IL | Finance IL | Google-style EM | Finance EM | Google-style Ops | Finance Ops | Capability it develops |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Architecture management | A | A | H | H | W | W | Architecture standards and design trade-offs |
@@ -214,7 +217,12 @@ This matrix is a *development guide*, not official PeopleCert role mapping and n
 | Strategy management | A | W | H | H | W | W | Turn vision into coherent priorities |
 | Supplier management | W | H | W | H | W | H | Vendor performance and interfaces |
 | Workforce and talent management | A | A | H | H | H | H | Hire, develop, deploy and retain talent |
+
+</div>
+
 ### Product/service management practices (22)
+
+<div class="practice-matrix" markdown="1" tabindex="0" role="region" aria-label="Product/service management practices (22)">
 
 | ITIL practice | Google-style IL | Finance IL | Google-style EM | Finance EM | Google-style Ops | Finance Ops | Capability it develops |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -240,6 +248,8 @@ This matrix is a *development guide*, not official PeopleCert role mapping and n
 | Service request management | A | A | A | A | W | H | Fulfil standard user requests |
 | Service validation and testing | W | H | H | H | W | W | Prove readiness and fitness for use |
 | Software development and management | W | W | H | H | H | W | Build sustainable and secure software |
+
+</div>
 
 ## My practical next step
 
