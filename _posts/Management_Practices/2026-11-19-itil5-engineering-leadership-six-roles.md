@@ -11,7 +11,7 @@ image: /assets/itil5/itil5-six-roles-overview.png
 
 *The same management practice can mean a completely different responsibility depending on the role you hold.*
 
-![Animated guide to the six engineering leadership contexts](/assets/itil5/itil5-six-roles-website.gif)
+![Animated guide to the six engineering leadership contexts](/assets/img/itil5/itil5-six-roles-website.gif)
 
 Something clicked for me while studying ITIL Foundation (Version 5).
 
