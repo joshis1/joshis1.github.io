@@ -10,7 +10,7 @@ description: About Shreyas Joshi: technical leadership, Java, software engineeri
     <h1>Engineering is a team sport.</h1>
     <p class="about-lede">I’m Shreyas Joshi, a technical leader who stays curious about how software works all the way down.</p>
     <p>My work brings together leadership and hands-on engineering. I care about building strong teams, making thoughtful technical decisions, and helping ideas become dependable products.</p>
-    <p>This site is where I collect lessons from that work: Java and software design, Linux and embedded systems, and the practical details that are easy to forget once a project is done.</p>
+    <p>This site is where I collect lessons from that work: Engineering Practices, Software design, DevOps, and the practical details that are easy to forget once a project is done.</p>
     <p class="about-actions"><a class="button button-dark" href="{{ site.linkedin_url }}" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a></p>
   </div>
   <figure class="about-portrait">
@@ -22,7 +22,7 @@ description: About Shreyas Joshi: technical leadership, Java, software engineeri
 <section class="about-details content-width">
   <div class="detail-block">
     <p class="eyebrow">Technical interests</p>
-    <ul class="interest-list"><li>Technical leadership</li><li>Java and software engineering</li><li>Object-oriented design and patterns</li><li>Linux, embedded systems and Yocto</li><li>Learning, mentoring and clear communication</li></ul>
+    <ul class="interest-list"><li>Technical leadership</li><li>Software engineering</li><li>Object-oriented design and patterns</li><li>Linux and Microsoft </li><li>Learning, mentoring and clear communication</li></ul>
   </div>
   <div class="detail-block">
     <p class="eyebrow">Selected work &amp; community</p>
