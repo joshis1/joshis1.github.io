@@ -2,7 +2,7 @@
 layout: post
 title:  "Calling JavaScript from C++ with Qt WebKit"
 date:   2015-04-12 14:13:31 +1300
-categories: cpp
+categories: Qt
 description: Two historical Qt WebKit techniques for calling JavaScript from C++, with lifecycle and loading considerations.
 ---
 This article discusses on how to call a JavaScript function from C++ using
