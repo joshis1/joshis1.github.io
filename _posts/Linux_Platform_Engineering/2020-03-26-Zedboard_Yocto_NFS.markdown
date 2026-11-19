@@ -4,6 +4,7 @@ title:  "Booting a MicroZed Linux Root Filesystem over NFS"
 date:   2020-03-26 14:13:31 +1300
 categories: ["Linux & Platform Engineering"]
 description: A historical Yocto and MicroZed NFS-root walkthrough, including server setup, kernel configuration, and boot arguments.
+published: true
 ---
 
 This walkthrough records an NFS-root setup for an Avnet MicroZed Zynq board and an Ubuntu 18.04 development VM. It is specific to that older environment and is not a current production recipe.

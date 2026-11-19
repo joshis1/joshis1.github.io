@@ -4,6 +4,7 @@ title:  "Debugging Linux Device Tree Overlays on MicroZed"
 date:   2020-04-01 16:13:31 +1300
 categories: ["Linux & Platform Engineering"]
 description: A historical Yocto and Zynq walkthrough for compiling, loading, and debugging a device tree overlay.
+published: true
 ---
 
 This historical walkthrough records how I debugged a device tree overlay for an out-of-tree PHY driver on a Yocto-built MicroZed system. Kernel, compiler, and board details affect the exact steps, so check the corresponding versions before applying them elsewhere.

@@ -4,6 +4,7 @@ title: "How Does Linux Boot? From BIOS and MBR to the First Process"
 date: 2013-08-11 15:08:03
 categories: ["Linux & Platform Engineering"]
 description: "The original Tune2Wizard walkthrough of the classic BIOS/MBR/GRUB Linux boot sequence, with the bootloader, initrd and PID 1 explained."
+published: true
 ---
 
 **When I press the power button, how does the machine move from a hardware self-test to running the first Linux process?**

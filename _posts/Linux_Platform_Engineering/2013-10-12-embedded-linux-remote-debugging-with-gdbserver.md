@@ -4,6 +4,7 @@ title: "Remote Debugging Embedded Linux with GDB and gdbserver"
 date: 2013-10-12 12:10:05
 categories: ["Linux & Platform Engineering"]
 description: "A hands-on MIPS embedded Linux debugging walkthrough: cross-compiling a C++ program and shared library, attaching GDB over Ethernet, and fixing missing symbols."
+published: true
 ---
 
 **How do you debug a program running on an embedded Linux device when the development machine and the target use completely different processors?**

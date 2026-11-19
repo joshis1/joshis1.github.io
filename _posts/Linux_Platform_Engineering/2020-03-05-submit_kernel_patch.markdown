@@ -4,6 +4,7 @@ title:  "Submitting My First Linux Kernel Patch"
 date:   2020-03-05 15:23:31 +1300
 categories: ["Linux & Platform Engineering"]
 description: Notes from preparing, revising, and emailing a first Linux kernel patch, including historical workflow caveats.
+published: true
 ---
 
 This is all about my journey to submit my first kernel patch. Here I have discussed all the important things you must know before you submit your kernel patch and also respond to the feedbacks.

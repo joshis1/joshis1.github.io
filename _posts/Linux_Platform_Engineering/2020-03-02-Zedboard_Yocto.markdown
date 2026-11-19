@@ -4,6 +4,7 @@ title:  "Bringing Up Avnet MicroZed Linux with Yocto"
 date:   2020-02-02 14:13:31 +1300
 categories: ["Linux & Platform Engineering"]
 description: A historical Yocto Warrior walkthrough for building and booting Linux on an Avnet MicroZed Zynq board.
+published: true
 ---
 
 This historical walkthrough records the steps I used to build U-Boot, a Linux kernel, a device tree, and a root filesystem for an Avnet MicroZed Zynq-7010 board using Yocto Warrior.
