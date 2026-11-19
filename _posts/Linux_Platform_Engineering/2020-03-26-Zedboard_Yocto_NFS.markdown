@@ -2,7 +2,7 @@
 layout: post
 title:  "Booting a MicroZed Linux Root Filesystem over NFS"
 date:   2020-03-26 14:13:31 +1300
-categories: Linux Systems Engineering
+categories: Linux_Systems_Engineering
 description: A historical Yocto and MicroZed NFS-root walkthrough, including server setup, kernel configuration, and boot arguments.
 ---
 

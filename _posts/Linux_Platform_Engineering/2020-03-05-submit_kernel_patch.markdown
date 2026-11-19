@@ -2,7 +2,7 @@
 layout: post
 title:  "Submitting My First Linux Kernel Patch"
 date:   2020-03-05 15:23:31 +1300
-categories: Linux Systems Engineering
+categories: Linux_Systems_Engineering
 description: Notes from preparing, revising, and emailing a first Linux kernel patch, including historical workflow caveats.
 ---
 
