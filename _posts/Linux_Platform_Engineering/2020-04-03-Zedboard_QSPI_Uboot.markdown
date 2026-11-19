@@ -2,7 +2,7 @@
 layout: post
 title:  "Reading and Writing QSPI Flash with U-Boot on Zynq"
 date:   2020-04-03 14:13:31 +1300
-categories: Linux_Systems_Engineering
+categories: ["Linux Systems Engineering"]
 description: A historical Zynq U-Boot walkthrough for loading, writing, verifying, and booting kernel and device-tree images from QSPI.
 ---
 This historical walkthrough records how I loaded a kernel and device tree from an SD card, wrote them to QSPI NOR flash with U-Boot, read them back for verification, and booted the kernel on a Zynq board. Confirm flash offsets, image sizes, and memory addresses for your hardware before running any write or erase command.

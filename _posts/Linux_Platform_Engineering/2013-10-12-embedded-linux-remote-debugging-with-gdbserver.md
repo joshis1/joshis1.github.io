@@ -2,7 +2,7 @@
 layout: post
 title: "Remote Debugging Embedded Linux with GDB and gdbserver"
 date: 2013-10-12 12:10:05
-categories: Linux_Systems_Engineering
+categories: ["Linux Systems Engineering"]
 description: "A hands-on MIPS embedded Linux debugging walkthrough: cross-compiling a C++ program and shared library, attaching GDB over Ethernet, and fixing missing symbols."
 ---
 

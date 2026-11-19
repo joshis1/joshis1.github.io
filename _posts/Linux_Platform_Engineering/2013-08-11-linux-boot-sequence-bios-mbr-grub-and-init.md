@@ -2,7 +2,7 @@
 layout: post
 title: "How Does Linux Boot? From BIOS and MBR to the First Process"
 date: 2013-08-11 15:08:03
-categories: Linux_Systems_Engineering
+categories: ["Linux Systems Engineering"]
 description: "The original Tune2Wizard walkthrough of the classic BIOS/MBR/GRUB Linux boot sequence, with the bootloader, initrd and PID 1 explained."
 ---
 
