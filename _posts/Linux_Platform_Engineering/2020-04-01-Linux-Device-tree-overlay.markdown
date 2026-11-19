@@ -2,7 +2,7 @@
 layout: post
 title:  "Debugging Linux Device Tree Overlays on MicroZed"
 date:   2020-04-01 16:13:31 +1300
-categories: Embedded_Linux
+categories: Linux Systems Engineering
 description: A historical Yocto and Zynq walkthrough for compiling, loading, and debugging a device tree overlay.
 ---
 

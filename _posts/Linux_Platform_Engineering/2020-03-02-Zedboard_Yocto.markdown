@@ -2,7 +2,7 @@
 layout: post
 title:  "Bringing Up Avnet MicroZed Linux with Yocto"
 date:   2020-02-02 14:13:31 +1300
-categories: Embedded_Linux
+categories: Linux Systems Engineering
 description: A historical Yocto Warrior walkthrough for building and booting Linux on an Avnet MicroZed Zynq board.
 ---
 

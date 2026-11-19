@@ -15,8 +15,8 @@ description: Shreyas Joshi’s personal notes on software design, system design,
     </div>
   </div>
   <figure class="hero-image">
-    <img src="{{ '/assets/img/AVNET_Zedboard.png' | relative_url }}" alt="Avnet MicroZed development board">
-    <figcaption><span>From the lab</span> Engineering.</figcaption>
+    <img src="{{ '/assets/img/Building_software.png' | relative_url }}" alt="Team Work">
+    <figcaption><span>Building software,</span>  guiding people.</figcaption>
     <span class="image-index" aria-hidden="true">01 / FIELD NOTES</span>
   </figure>
 </section>

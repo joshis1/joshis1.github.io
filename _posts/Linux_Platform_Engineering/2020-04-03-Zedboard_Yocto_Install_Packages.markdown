@@ -2,7 +2,7 @@
 layout: post
 title:  "Adding Packages to a Yocto Image"
 date:   2020-04-03 18:13:31 +1300
-categories: Embedded_Linux
+categories: Linux Systems Engineering
 description: A short, version-specific note on finding recipes and adding packages to a Yocto image.
 ---
 
