@@ -16,7 +16,7 @@ description: Shreyas Joshi’s personal notes on software design, system design,
   </div>
   <figure class="hero-image">
     <img src="{{ '/assets/img/AVNET_Zedboard.png' | relative_url }}" alt="Avnet MicroZed development board">
-    <figcaption><span>From the lab</span> MicroZed, Yocto and a lot of learning by doing.</figcaption>
+    <figcaption><span>From the lab</span> Engineering.</figcaption>
     <span class="image-index" aria-hidden="true">01 / FIELD NOTES</span>
   </figure>
 </section>
