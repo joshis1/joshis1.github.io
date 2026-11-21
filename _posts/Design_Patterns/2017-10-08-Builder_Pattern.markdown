@@ -301,4 +301,4 @@ pattern. Here, the builder object ‘has a’ tuner object.
 
 You can download the entire code here.
 
-[Source_code_BuilderPattern](https://drive.google.com/open?id=1ncwbzoSmpxX9x-tOjzeVTJ6iEqGbUtFT)
+Source_code_BuilderPattern (archived download link withheld pending content and permission review)
