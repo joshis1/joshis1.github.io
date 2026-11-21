@@ -426,14 +426,14 @@ FSBL, you need to use Xilinx SDK. Also, I will suggest that it is a better idea 
 
 Here is the link to download the tutorial for FSBL based AVNET ZYNQ-7010.
 
-[FSBL_Tutorial](https://drive.google.com/open?id=1RjMOyBuzkphg4NjYy28krqLvtYS29rfD)
+FSBL_Tutorial (archived download link withheld pending content and permission review)
 
 
 I strongly suggest to use SPL image rather than FSBL since if you get
 stuck with something then you have no support but to use peta-linux
 only.
 
-Here is the link to download the [ZedboardImage](https://drive.google.com/open?id=10LsddxTvGmLnEsdgI-SYKYGNvOzIK-zc).
+Here is the link to download the ZedboardImage (archived download link withheld pending content and permission review).
 
 Here are the jumper settings to change the boot mode to JTAG, QSPI or SD Card.
 
@@ -441,7 +441,7 @@ Here are the jumper settings to change the boot mode to JTAG, QSPI or SD Card.
 
 Also, you can read the entire guide on setting.
 
-[Zedboard reference guide](https://drive.google.com/open?id=1UcFAOTKosQ9m8bufOg3s5oGMPxCNyaVF)
+Zedboard reference guide (archived download link withheld pending content and permission review)
 
 
 This brings an end to this article. Here is the entire embedded system running.
