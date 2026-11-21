@@ -93,6 +93,6 @@ Use `tcpdump`/Wireshark BPDU captures and traffic counters where possible. Avoid
 The root bridge is **not a master device that forwards every frame**; it is the reference point used to build a loop-free logical tree. RSTP gives redundancy without leaving every redundant path forwarding at once. The point of automation is to prove that all devices **agree**, not just to read one configuration command.
 
 **Shreyas Joshi**  
-*CCNA certified — Routing and Switching*
+*CCNA Routing and Switching — previously earned (December 2018); expired December 2021*
 
 **References:** [RSTP overview (IEEE 802.1D background)](https://www.ieee802.org/1/pages/802.1D.html) · [Cisco spanning tree technology](https://www.cisco.com/c/en/us/tech/lan-switching/spanning-tree-protocol/index.html)
