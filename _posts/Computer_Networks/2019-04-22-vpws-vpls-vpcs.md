@@ -61,6 +61,6 @@ Some GNS3 virtual-router images will not support the full L2VPN feature set. In 
 **The underlay decides how provider routers reach each other; the L2VPN service decides what Layer 2 connectivity the customer experiences.** A test PC is only a test PC. Getting that vocabulary right prevents a lot of architecture confusion.
 
 **Shreyas Joshi**  
-*CCNA certified — Routing and Switching*
+*CCNA Routing and Switching — previously earned (December 2018); expired December 2021*
 
 **References:** [RFC 4761 — BGP VPLS](https://www.rfc-editor.org/rfc/rfc4761) · [RFC 4762 — LDP VPLS](https://www.rfc-editor.org/rfc/rfc4762) · [RFC 4447 — Pseudowire setup](https://www.rfc-editor.org/rfc/rfc4447) · [GNS3 VPCS documentation](https://docs.gns3.com/docs/emulators/vpcs)
