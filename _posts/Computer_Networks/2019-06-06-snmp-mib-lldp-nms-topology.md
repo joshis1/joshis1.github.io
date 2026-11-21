@@ -94,6 +94,6 @@ In actual code, use library timeouts, retries, good error messages and version-s
 A useful NMS doesn't just draw a topology. It helps answer: **What is down? Where is the impact? Which other services depend on it? Are counters rising? Did an interface flap?** SNMP and LLDP help build visibility, but trustworthy monitoring also needs change records, alert thresholds, clear ownership and operational response.
 
 **Shreyas Joshi**  
-*CCNA certified — Routing and Switching*
+*CCNA Routing and Switching — previously earned (December 2018); expired December 2021*
 
 **References:** [SNMP architecture RFC 3411](https://www.rfc-editor.org/rfc/rfc3411) · [IF-MIB RFC 2863](https://www.rfc-editor.org/rfc/rfc2863) · [SolarWinds Network Topology Mapper](https://www.solarwinds.com/network-topology-mapper)
