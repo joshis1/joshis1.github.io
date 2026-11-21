@@ -81,6 +81,6 @@ For the ping example, 1372 bytes of ICMP payload plus 8 ICMP and 20 IPv4 header 
 When I hear *“switching is faster”*, my next questions are: **Which hardware? Which features? What packet sizes? What link rate? Is traffic in ASIC or CPU?** The bottleneck might be serialization, queueing, a tunnel's reduced MTU, fragmentation or application behaviour—not the OSI layer number.
 
 **Shreyas Joshi**  
-*CCNA certified — Routing and Switching*
+*CCNA Routing and Switching — previously earned (December 2018); expired December 2021*
 
 **References:** [UDP RFC 768](https://www.rfc-editor.org/rfc/rfc768) · [TCP RFC 9293](https://www.rfc-editor.org/rfc/rfc9293) · [Path MTU Discovery RFC 1191](https://www.rfc-editor.org/rfc/rfc1191) · [IPv6 RFC 8200](https://www.rfc-editor.org/rfc/rfc8200)
