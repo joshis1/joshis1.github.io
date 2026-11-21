@@ -92,6 +92,6 @@ These are Cisco-style verification examples; the available subset varies by IOS 
 The simplest memory aid is **map → labels → forwarding**. OSPF makes the underlay reachable; label signalling establishes the forwarding context; MPLS moves packets across the backbone according to those labels. OSPF-TE enriches the map; RSVP-TE can use that information to build a deliberately constrained LSP.
 
 **Shreyas Joshi**  
-*CCNA certified — Routing and Switching*
+*CCNA Routing and Switching — previously earned (December 2018); expired December 2021*
 
 **References:** [MPLS Architecture RFC 3031](https://www.rfc-editor.org/rfc/rfc3031) · [OSPF-TE RFC 3630](https://www.rfc-editor.org/rfc/rfc3630) · [RSVP-TE RFC 3209](https://www.rfc-editor.org/rfc/rfc3209) · [FRRouting](https://docs.frrouting.org/en/latest/)
