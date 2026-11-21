@@ -207,6 +207,6 @@ Configure a matching password on the peer. Use protected secret handling in real
 **OSPF tells routers how to reach things within their own domain. BGP tells different routing-policy domains which prefixes they are willing to exchange.** A healthy provider network needs both *fast and correct internal convergence* and *carefully controlled external reachability*. Fast does not mean uncontrolled, and an AS path is not the same as a measured latency path.
 
 **Shreyas Joshi**  
-*CCNA certified — Routing and Switching*
+*CCNA Routing and Switching — previously earned (December 2018); expired December 2021*
 
 **Technical references:** [OSPF NSSA RFC 3101](https://www.rfc-editor.org/rfc/rfc3101) · [BGP RFC 4271](https://www.rfc-editor.org/rfc/rfc4271) · [Telstra AS1221](https://bgp.tools/as/1221) · [Optus AS7474](https://bgp.tools/as/7474) · [Aussie Broadband AS4764](https://bgp.tools/as/4764) · [Everyday Mobile coverage](https://mobile.everyday.com.au/coverage)
