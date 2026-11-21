@@ -298,4 +298,4 @@ The example shows the basic delegation idea. A production dispatcher should also
 This brings an end to the topic of the Chain of Responsibility pattern.
 Here is the entire code that can be downloaded.
 
-[Source_code_COR_Pattern](https://drive.google.com/open?id=19BCediyhqoeB7vQWyJZnhWbGlwrgZyj-)
+Source_code_COR_Pattern (archived download link withheld pending content and permission review)
