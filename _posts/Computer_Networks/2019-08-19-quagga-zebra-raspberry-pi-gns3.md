@@ -118,6 +118,6 @@ For me, the value of GNS3 was seeing a concept at three layers: **configuration*
 **Router hardware is not the same thing as routing logic.** The kernel makes forwarding decisions, and routing protocols keep the control-plane data current. Quagga/Zebra taught me that split; FRRouting is the natural modern software lab to revisit it.
 
 **Shreyas Joshi**  
-*CCNA certified — Routing and Switching*
+*CCNA Routing and Switching — previously earned (December 2018); expired December 2021*
 
 **References:** [FRR architecture](https://docs.frrouting.org/en/latest/about.html) · [FRR basic setup](https://docs.frrouting.org/en/latest/setup.html) · [GNS3 documentation](https://docs.gns3.com/)
