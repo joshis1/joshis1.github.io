@@ -87,6 +87,6 @@ For voice/video, the most useful outputs are not just “the packet went through
 QoS is the behaviour of a network **under contention**. My testing question became: *I marked the packets; did the forwarding behaviour actually change when the network became busy?* The difference between configuration and evidence is where test automation adds value.
 
 **Shreyas Joshi**  
-*CCNA certified — Routing and Switching*
+*CCNA Routing and Switching — previously earned (December 2018); expired December 2021*
 
 **References:** [IEEE 802.1Q background](https://www.ieee802.org/1/pages/802.1Q.html) · [DiffServ architecture RFC 2475](https://www.rfc-editor.org/rfc/rfc2475)
