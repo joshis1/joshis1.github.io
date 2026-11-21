@@ -29,9 +29,8 @@ description: About Shreyas Joshi: technical leadership, Java, software engineeri
     <ul class="resource-list">
       <li><a href="https://opensourceforu.com/2014/09/qt-webkit-a-quick-way-to-develop-a-destop-or-mobile-app/">Qt WebKit: a quick way to develop desktop or mobile apps <span>↗</span></a></li>
       <li><a href="https://opensourceforu.com/2014/02/manage-routine-tasks-jenkins/">Manage routine tasks with Jenkins <span>↗</span></a></li>
-      <li><a href="https://www.youracclaim.com/badges/71113f38-defa-4c1e-a7bd-86241a4cbab6/public_url">Networking certification <span>↗</span></a></li>
+      <li><a href="https://www.youracclaim.com/badges/71113f38-defa-4c1e-a7bd-86241a4cbab6/public_url">CCNA — previously earned (now expired) <span>↗</span></a></li>
       <li><a href="https://www.flickr.com/photos/101288163@N03/">Photography <span>↗</span></a></li>
-      <li><a href="https://drive.google.com/open?id=1WLlwnEE8TdE1PqAcGz5RWdllCKNsn4ar">Toastmasters <span>↗</span></a></li>
     </ul>
   </div>
 </section>
