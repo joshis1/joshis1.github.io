@@ -34,7 +34,7 @@ An example of a guiding principle is **focus on value**. "Prioritise platform st
 
 ## The verb: a value stream
 
-Now imagine a business request: a member needs an insurance claim processed, or an internal employee needs a system outage resolved.
+Now imagine a business request: a customer needs a booking confirmed, or an internal employee needs a system outage resolved.
 
 A **value stream** is the particular end-to-end flow of activities through which the organisation responds to demand or opportunity and creates value. In shorthand:
 
@@ -75,9 +75,9 @@ For example, take **governance**. There are people who make decisions, informati
 
 ## One example that connects everything
 
-Consider a digital claims service. The business wants to release a new correspondence capability.
+Consider a fictional appointment-booking service. The product team wants to release a new reminder capability.
 
-The **value stream** runs from the need, through analysis, vendor development, testing, transition, operation and support, towards a usable service.
+The **value stream** runs from the need, through analysis, engineering, testing, transition, operation and support, towards a usable service.
 
 The **Value System** provides governance, principles, practices, operating activities and improvement mechanisms.
 
@@ -94,3 +94,5 @@ This is the point where ITIL stopped feeling like a vocabulary test and started 
 **Further reading:** [PeopleCert — ITIL Foundation (Version 5)](https://www.peoplecert.org/browse-certifications/it-governance-and-service-management/ITIL-1/itil-5-foundation-version-50-4154).
 
 *This article is an independent learning interpretation, not an official ITIL training guide.*
+
+*All service examples are invented for learning and do not refer to a specific organisation, client, supplier or incident.*
