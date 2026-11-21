@@ -265,7 +265,7 @@ is to give different clock rates to different peripherals. The PLL can be config
 rate to a particular peripheral. PLL stands for phase locked loop. It is a controlled circuit.
 
 
-[Zedboard reference guide](https://drive.google.com/open?id=1UcFAOTKosQ9m8bufOg3s5oGMPxCNyaVF)
+Zedboard reference guide (archived download link withheld pending content and permission review)
 
 
 This brings an end to this article. Here is the entire embedded system running.
