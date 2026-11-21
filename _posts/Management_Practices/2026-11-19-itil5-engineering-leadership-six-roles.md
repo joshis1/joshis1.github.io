@@ -20,9 +20,9 @@ I had been thinking about career progression in terms of job titles: Iteration L
 
 The better question is: **Which management practices must I understand, what capability must I develop, and what should I actually be able to do with it?**
 
-This matters to me because my background has moved across software engineering, Linux and systems integration, and then into delivery leadership in Australian superannuation and insurance technology. I've spent time where the sprint board, testing evidence, release governance and the people supporting production all meet. I enjoy delivery, but I also want to stay close to engineering. So this is more than an ITIL study note. It is a way for me to test where I am strong and where I still need to grow.
+My interests span software engineering, Linux, systems integration and delivery leadership. The relationship between planning, testing evidence, service readiness and engineering decisions makes this more than an ITIL study note: it is a way to identify capabilities to develop.
 
-One lesson I keep coming back to: **a release can look green on a board and still be unready for the people who depend on it.** The real skill is making those gaps visible early and helping the right people make the decision.
+A general delivery principle worth testing: **a green schedule indicator does not by itself demonstrate service readiness.** Teams need evidence of quality, supportability and decision ownership.
 
 ## Two environments. Three roles. Six different expectations.
 
@@ -152,18 +152,18 @@ This was the clearest way for me to connect the dots. “Change Enablement” is
 
 I prefer saying **“roll it out to a small group first, check that it works, then expand it”** rather than dropping specialist deployment jargon into every conversation. The engineering behind it matters, but the explanation should work for business stakeholders too.
 
-## An example I can relate to: claims correspondence stops working
+## Fictional example: a customer notification service stops working
 
-Imagine a claims system sends letters through an external service. Some letters fail, and members do not receive important correspondence. At first, it might look like a straightforward integration defect. But this is exactly where role boundaries and the whole-system view matter.
+Imagine a fictional appointment platform that sends reminders through an external notification service. Some reminders fail. This invented scenario illustrates role boundaries and whole-service thinking; it is not drawn from a real incident.
 
 | Role | First useful action | ITIL practice lens |
 | --- | --- | --- |
 | Google-style IL | Make dependencies and the next product-team decision visible. | Relationship Management; Measurement and Reporting |
 | Financial-services IL | Bring BA, vendor, testers, release owners and business decision-makers into a single realistic recovery plan. | Project Management; Supplier Management; Change Enablement |
 | Google-style EM | Help engineers choose between queueing, retries, de-duplication and better integration design. | Architecture Management; Software Development and Management |
-| Financial-services EM | Ensure the technical fix protects correspondence integrity, personal data and auditability. | Risk Management; Information Security Management; Service Validation and Testing |
+| Financial-services EM | Ensure the technical fix protects notification integrity, personal data and auditability. | Risk Management; Information Security Management; Service Validation and Testing |
 | Google-style Ops | Make the failures visible, respond quickly and automate recovery where safe. | Monitoring and Event Management; Incident Management; Problem Management |
-| Financial-services Ops | Assess the affected members, restore service safely, reconcile failed items and verify the recovery process. | Incident Management; Service Continuity Management; Supplier Management |
+| Financial-services Ops | Assess affected users, restore service safely, reconcile failed items and verify the recovery process. | Incident Management; Service Continuity Management; Supplier Management |
 
 A useful leadership sequence is: **Validate the problem → understand the customer impact → stop the immediate harm → name the decision owners → fix the root cause → prove the fix worked.**
 
@@ -271,4 +271,4 @@ The ITIL practice names and seven guiding principles come from the framework. Th
 - [Google SRE — incident management and reliability signals](https://sre.google/resources/practices-and-processes/incident-management-guide/)
 - [Google Careers — Engineering Manager example](https://www.google.com/about/careers/applications/jobs/results/130322727708828358-engineering-manager-people-ops-engineering)
 
-*Written as a personal professional reflection, not a statement of employer policy or a substitute for reviewing a real job description.*
+*Independent educational reflection. The examples are fictional and are not claims about a particular employer, customer, supplier, incident or restructuring. This is not a statement of employer policy or a substitute for a real job description.*
