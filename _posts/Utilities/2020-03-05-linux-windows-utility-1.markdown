@@ -92,7 +92,7 @@ Many times, you will realise that your virtual machine box needs more space then
 I faced this issue while using yocto in my virtual machine running Ubuntu. Here is what I referred to increase
 the size of my virtual machine box - 
 
-[Enlarge Virtual Machine disk space](https://drive.google.com/open?id=1ZLMDLuKJZ9nKfB_6DXYVlBid0gCLYsS9)
+Enlarge Virtual Machine disk space (archived download link withheld pending content and permission review)
 
 
 This brings an end to this article. This article was just to touch some
