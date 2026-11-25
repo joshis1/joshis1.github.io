@@ -198,7 +198,7 @@ Here is the result.
 
 The entire code can be downloaded below. Here the code is written in Python.
 
-[Source_code_ObserverPattern](https://drive.google.com/open?id=1SPHpEjtD0MnGXIcL5ZEL7lPqAvEdQsoc)
+Source_code_ObserverPattern (archived download link withheld pending content and permission review)
 
 **When to use Observer Pattern?**
 Whenever an update is to be published to multiple clients. It is like one to

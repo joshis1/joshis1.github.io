@@ -30,9 +30,7 @@ This distinction is especially important in technology delivery:
 
 A management practice is closer to the *capability* level than to the person or position title.
 
-If a project coordination role disappears, the Project Management practice may remain. Its activities might move to product leads, analysts, engineering managers or a central delivery function.
-
-That doesn't prove the old role was ineffective, and it doesn't prove the new design is better. Those are separate questions that require evidence.
+In a fictional redesign, a team might distribute project coordination responsibilities among product leads, analysts, engineering managers or a delivery function. The underlying Project Management capability remains important. Whether a proposed structure works depends on evidence, not assumptions about people or titles.
 
 ## The four questions I would ask during a redesign
 
@@ -42,17 +40,15 @@ That doesn't prove the old role was ineffective, and it doesn't prove the new de
 
 **3. Where does integrated visibility come from?** Individual specialists can see their work clearly while cross-team dependencies remain invisible.
 
-**4. What capability would become weaker if a role were removed?** If the answer is 'none', perhaps the work was duplicated. If the answer is 'risk visibility and cross-team coordination', that gap needs an explicit owner.
+**4. Which capabilities and handoffs need clear owners?** For example, integrated risk visibility and cross-team coordination need explicit ownership regardless of titles.
 
 ## A practical example
 
-A vendor-led platform team has knowledgeable analysts, experienced testers, a supplier manager and a capable Product Owner. The squad can run its own stand-up and track work in Jira.
+**Fictional example:** A digital product team has analysts, engineers, testers, support specialists and a Product Owner. They use a shared work board.
 
-A dedicated Iteration Lead is useful **only if there is distinct work to own**: an integrated delivery forecast, cross-team risks, dependency resolution, release readiness, flow improvement or decision support.
+An Iteration Lead can add value through integrated forecasts, risk visibility, dependency resolution, release readiness and decision support. The appropriate allocation of responsibilities depends on complexity and team needs.
 
-Otherwise, the position may add a handoff rather than remove one.
-
-The same analysis applies to new titles. Calling a position 'Engineering Manager' does not make it accountable for engineering quality if technical standards, people decisions and production ownership all live elsewhere.
+The same analysis applies to any title: responsibility for engineering quality, people leadership and production ownership should be assigned explicitly.
 
 ## A better way to examine role design
 
@@ -74,4 +70,4 @@ Exact accountabilities differ by organisation. The point is to make them **expli
 
 That is the relationship I now see between ITIL, operating model design and engineering leadership.
 
-*This is an independent reflection on operating models, not a claim about any specific employer or restructuring decision.*
+*This independent educational reflection uses fictional examples and makes no assessment of any specific employer, colleague, team or restructuring decision.*

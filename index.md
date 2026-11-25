@@ -46,17 +46,9 @@ description: Shreyas Joshi’s personal notes on software design, system design,
 
 <section class="archive-band">
   <div class="content-width archive-inner">
-    <div><p class="eyebrow">Before this notebook</p><h2>Earlier projects &amp; notes</h2><p>Some older resources from my previous site are still available in their original form.</p></div>
+    <div><p class="eyebrow">Before this notebook</p><h2>Earlier projects &amp; notes</h2><p>Selected older open-source projects are linked below. Archived documents are not publicly linked until their content and sharing permissions have been reviewed.</p></div>
     <ul class="legacy-links">
-      <li><a href="https://drive.google.com/open?id=1NjI3IGuAGdeRiD6xSvwTR7y8Eq3xrEfr">Raspberry Pi notes <span>↗</span></a></li>
       <li><a href="https://github.com/joshis1/C_Programming/tree/master/resources/SNMP/RaspberryPI_SNMP">Raspberry Pi project <span>↗</span></a></li>
-      <li><a href="https://drive.google.com/open?id=1N2sB2UvEKqfOreuga1n0HCcsKTcVLZPs">Design patterns <span>↗</span></a></li>
-      <li><a href="https://drive.google.com/open?id=1xZBa--b-3kIRY0E85uhdk0i95X5nyOmr">Qt <span>↗</span></a></li>
-      <li><a href="https://drive.google.com/open?id=1R0_TzEtW2moJpd5ZcmWh0Bc5Tz7ATEi9">Kernel <span>↗</span></a></li>
-      <li><a href="https://drive.google.com/open?id=1-ZXhIWRDghVJ1uS-VzbUo_Yym0rO_5YO">Linux <span>↗</span></a></li>
-      <li><a href="https://drive.google.com/open?id=14zIvY7DtwHnhkg9FMWlfFw9OIvZFR5Fn">Operating systems <span>↗</span></a></li>
-      <li><a href="https://drive.google.com/open?id=1kmtx3HNGLbkLuUonHRa8RD9jpLPoD9Za">Data structures <span>↗</span></a></li>
-      <li><a href="https://drive.google.com/open?id=1Ym3kJR8bQce_lOxzJvVRtKtnzbBHbKtk">Decoder image <span>↗</span></a></li>
     </ul>
   </div>
 </section>

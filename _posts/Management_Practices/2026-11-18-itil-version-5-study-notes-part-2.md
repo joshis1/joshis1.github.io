@@ -41,9 +41,9 @@ Governance is the means by which an organisation is **directed and controlled**.
 
 My notes use four interconnected activities:
 
-| Governance activity | What happens | Example in a digital claims service |
+| Governance activity | What happens | Example in a fictional online booking service |
 | --- | --- | --- |
-| **Engage stakeholders** | Understand needs, obligations and accountability. | Speak with claims operations, risk, technology and the platform supplier about a proposed change. |
+| **Engage stakeholders** | Understand needs, obligations and accountability. | Speak with customer support, risk, technology and the platform supplier about a proposed change. |
 | **Evaluate** | Assess options, performance, relationships, risks and alignment to strategy. | Compare the business impact, cost, security and dependency risks of two approaches. |
 | **Direct** | Establish direction, policies, decisions and assigned responsibilities. | Approve an approach, define decision rights, and assign owners for delivery and controls. |
 | **Monitor** | Assess performance and conformance against agreed direction. | Review service measures, outstanding risks, incidents, control evidence and expected benefits. |
@@ -152,7 +152,7 @@ For me, the key is what happens *after* step six. Continue the improvement, adju
 
 ### CSF, KPI and metric: related, but not identical
 
-- **Critical success factor (CSF):** a condition needed to achieve the intended result. For example, claims staff must be able to trust the accuracy of outgoing correspondence.
+- **Critical success factor (CSF):** a condition needed to achieve the intended result. For example, customers should receive accurate booking confirmations.
 - **Key performance indicator (KPI):** a selected measure used to judge performance against an important objective. For example, the percentage of correspondence delivered within the agreed service level.
 - **Metric:** a measurement or calculation used to assess or monitor something. For example, queue depth, elapsed processing time or retry count.
 
@@ -188,7 +188,7 @@ Part 1 introduced the difference between **value chain**, **value stream**, and 
 
 ### Example: a correspondence-change request
 
-Imagine a business team asks for a small change to a claims letter. The work travels through business triage, analysis, supplier estimation, prioritisation, build, testing, change approval and release.
+Imagine a business team asks for a small change to a booking-confirmation template. The work travels through business triage, analysis, supplier estimation, prioritisation, build, testing, change approval and release.
 
 The developer may need just a short change, while most elapsed time is spent waiting between steps. The central question becomes **“Where is the work waiting, and what creates that wait?”**, not simply “Why is the developer slow?”
 
@@ -306,11 +306,11 @@ The test is whether the combination improves outcomes with appropriate risk mana
 
 ## 8. Putting it together: one fictional service scenario
 
-**Scenario:** Claims operations reports that some digital correspondence is not reaching members. A supplier owns the external correspondence platform; an internal team owns the integration and claims workflow. It is initially unclear where the failure occurs.
+**Scenario:** A fictional booking service reports that some confirmation messages are not reaching customers. An external provider operates a notification service and a product team owns the integration. Initially, the source of the failure is unknown.
 
 | Lens | What I would ask or do |
 | --- | --- |
-| **Value and outcome** | Who is affected? What member or business harm occurs when communication is delayed? |
+| **Value and outcome** | Who is affected? What customer or business impact occurs when a confirmation is delayed? |
 | **Governance** | Which decisions can the response team make, and which need risk, product or executive approval? |
 | **Incident management** | Confirm scope, severity and restoration options; communicate known impact and uncertainty. |
 | **Problem management** | Investigate recurrence, technical causes, known errors and longer-term prevention. |

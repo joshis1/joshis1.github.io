@@ -1,14 +1,12 @@
 ---
 layout: post
-title: "The Release Was On Time. Operations Wasn't Happy. Did We Actually Succeed?"
+title: "An On-Time Release Is Not Always a Successful Outcome"
 date: 2026-11-18 08:30:00 +1000
 categories: Management_Practices
-description: "Why on-time delivery can hide operational pain, what Goodhart's Law really says and how to measure value without gaming the metric."
+description: "A fictional release example explaining outputs, outcomes, value and Goodhart's Law."
 ---
 
-Picture a release meeting. The dashboard is green. The deadline was met. The project has been handed over.
-
-Two weeks later, Operations reports scenarios that do not work as expected, incomplete requirements and expensive manual workarounds.
+**Fictional learning scenario:** Imagine a product team releasing an appointment-reminder feature on schedule. After release, users identify a few missed edge cases and support documentation that needs improvement. The circumstances are invented solely to explore how delivery success should be measured.
 
 **Was that a successful delivery?**
 
@@ -20,9 +18,9 @@ These three ideas sound similar, but they answer different questions:
 
 | Lens | Question | Example |
 | --- | --- | --- |
-| **Output** | What did we deliver? | A new claims correspondence release |
-| **Outcome** | What changed for the people using it? | Staff can generate and track correct correspondence |
-| **Value** | What useful benefit was realised? | Less rework, reliable communication and lower service risk |
+| **Output** | What did we deliver? | An appointment-reminder feature |
+| **Outcome** | What changed for the people using it? | Customers receive accurate reminders |
+| **Value** | What useful benefit was realised? | Fewer missed appointments and less manual follow-up |
 
 "Delivered on time" is an important delivery measure. It is not, by itself, proof of the outcome.
 
@@ -76,9 +74,9 @@ A metric tells us something. A KPI elevates it as an important signal. A CSF tel
 
 ## Who owns the problem?
 
-Consider a vendor-led delivery with business analysts, testers, Operations, a Product Owner, a delivery lead and a release or change authority.
+Consider a fictional delivery involving analysts, testers, support staff, a Product Owner, engineers, a delivery lead and a designated release decision-maker.
 
-The BA and Product Owner help ensure requirements and business acceptance are understood. Testers provide validation evidence. The vendor addresses technical defects. Operations assesses supportability. The delivery lead joins up the risks and dependencies. A designated authority makes the decision to proceed within governance.
+The BA and Product Owner help ensure requirements and business acceptance are understood. Testers provide validation evidence. Engineers address technical defects. Operations assesses supportability. The delivery lead joins up the risks and dependencies. A designated authority makes the decision to proceed within governance.
 
 No single person can replace all of those controls.
 
@@ -96,10 +94,12 @@ Instead of asking only, "Are we on track for Thursday?", ask:
 
 This connects directly to ITIL's guiding principle **focus on value**. It also makes continual improvement meaningful: learn from the gaps, change the system, and observe whether the change actually helped.
 
-## The question I now carry into every release
+## A useful question for any release review
 
 > **Would we still call this delivery successful if the release date were removed from the dashboard?**
 
 If the answer is unclear, the team needs a better definition of success — not necessarily another status report.
 
 **Further reading:** [Cambridge discussion of Goodhart's Law](https://www.damtp.cam.ac.uk/user/mem2/papers/LHCE/goodhart.html) · [PeopleCert ITIL Foundation (Version 5)](https://www.peoplecert.org/browse-certifications/it-governance-and-service-management/ITIL-1/itil-5-foundation-version-50-4154).
+
+*This independent educational article does not describe, assess or attribute outcomes to any current or former employer, colleague, client or supplier.*

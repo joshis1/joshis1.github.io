@@ -175,7 +175,7 @@ see some log messages on the serial port until the kernel serial port is setup b
 The console parameters are same - device - ttyPS0 and the baud rate 115200.
 
 Here is the core-image-minimal-microzed-zynq tar rootfs tar file for you to download.
-[microzed root fs](https://drive.google.com/open?id=1XJVQ7y7FuixQ0IoXNBwGXZqgJWz8sQe5)
+microzed root fs (archived download link withheld pending content and permission review)
 
 **Troubleshooting NFS in general**
 
